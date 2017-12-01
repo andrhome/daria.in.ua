@@ -1,0 +1,11 @@
+/** Base files **/
+@import "base/reset";
+@import "base/mixins";
+@import "base/variables";
+@import "base/fonts";
+@import "base/base";
+
+/** Partials blocks **/
+@import "partials/header";
+@import "partials/main-content";
+@import "partials/footer";

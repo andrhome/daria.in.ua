@@ -1,0 +1,34 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+$wrapper_width: 1680px;
+
+.wrapper_section {
+  width: 100%;
+  max-width: $wrapper_width;
+  margin: 0 auto;
+}
+
+@function em($fontSize, $context) {
+  @return #{$fontSize/$context}em;
+}
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (max-width: $tablet) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: $desktop) { @content; }
+  }
+}
