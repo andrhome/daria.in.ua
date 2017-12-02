@@ -3,7 +3,12 @@
 	
   $(document).ready(function () {
 
-    
+      /**
+       * AOS animations init
+       */
+      AOS.init({
+          easing: 'ease'
+      });
 
   });
 

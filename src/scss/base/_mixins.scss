@@ -1,7 +1,7 @@
 @mixin clearfix() {
   &::after {
+    content: '';
     display: block;
-    content: "";
     clear: both;
   }
 }
@@ -14,8 +14,11 @@ $wrapper_width: 1680px;
   margin: 0 auto;
 }
 
-@function em($fontSize, $context) {
-  @return #{$fontSize/$context}em;
+@mixin flex-box($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
 }
 
 @mixin respond-to($media) {

@@ -1,75 +1,18 @@
-@keyframes effect_logo {
-  from {
-    opacity: 0;
+.header {
+  @include flex-box(row, space-between, center);
+  padding-top: 100px;
+  &.fixed {
+    display: block;
   }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes effect_fixed {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-header {
-  @extend .wrapper_section;
-  padding: 14px 40px;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  background-color: $bg_first_screen;
-  h1 {
-    overflow: hidden;
+  .home {
+    display: none;
   }
   .logo {
-    float: left;
-    img {
-      height: 70px;
-      animation: effect_fixed 2s;
-      vertical-align: top;
-    }
+    width: 300px;
+    padding-left: 4px;
+    margin-left: 86px;
   }
-  @include clearfix;
-}
-
-.menu-section {
-  margin-top: 15px;
-  float: right;
-  @include clearfix;
-  .button {
-    color: $color-1--2;
-    border: 1px solid $color-1--2;
-    padding: 10px 20px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    background: transparent;
-    font-family: 'BrandonBold', sans-serif;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    &:hover {
-      background: $color-1--2;
-      color: $color_white;
-    }
-  }
-}
-
-@media(max-width: $desktop) {
-  .menu-section {
-    margin-top: 7px;
-  }
-}
-
-@media(max-width: $mobile) {
-  .menu-section {
-    margin-top: 4px;
+  a {
+    font-size: $font-size-big - 4;
   }
 }
