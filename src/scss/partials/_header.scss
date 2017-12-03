@@ -1,18 +1,51 @@
+/**
+ * Main header
+ */
 .header {
-  @include flex-box(row, space-between, center);
-  padding-top: 100px;
-  &.fixed {
-    display: block;
+  padding-top: 32px;
+  position: relative;
+  a {
+    font-size: $font-size-big;
+    display: inline-block;
   }
-  .home {
-    display: none;
+  &.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .home {
+      display: block;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto;
+      animation: ease-in-out fade-in-scale 1s;
+      transition-delay: 1s;
+    }
   }
   .logo {
     width: 300px;
-    padding-left: 4px;
-    margin-left: 86px;
+    padding-left: 1px;
+    margin-left: 68px;
+    animation: linear fade-in 1.5s;
+    transition-delay: 2s;
   }
-  a {
-    font-size: $font-size-big - 4;
+  .home,
+  .about {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    animation: linear fade-in 1.5s;
+    transition-delay: 2s;
+  }
+  .home {
+    display: none;
+    right: inherit;
+    left: 0;
+    transition-duration: 1s;
+    transition-delay: .5s;
+  }
+  .about {
+    width: 284px;
   }
 }

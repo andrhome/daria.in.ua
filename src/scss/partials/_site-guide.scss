@@ -1,0 +1,45 @@
+/**
+ * Fixed site guide
+ */
+.site-guide {
+  width: 55px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  right: 98px;
+  transform: translateY(-50%);
+  &, & > * {
+    transition: all .2s ease-in-out;
+  }
+  &__number {
+    font-family: $font-regular;
+    font-size: $font-size-st;
+    color: $color-1--1;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+  &__section-name {
+    width: 16px;
+    font-size: $font-size-big - 4;
+    line-height: $font-size-big + 6;
+    color: $color-3--1;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    padding: 55px 0;
+    margin-left: -4px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: $color-3--1;
+      position: absolute;
+      top: 0;
+      right: -15px;
+    }
+  }
+}

@@ -10,27 +10,72 @@
 </head>
 <body>
 <div class="grids">
-    <div><span data-aos="grid-loading"></span></div>
-    <div><span data-aos="grid-loading"></span></div>
-    <div><span data-aos="grid-loading"></span></div>
-    <div><span data-aos="grid-loading"></span></div>
-    <div><span data-aos="grid-loading"></span></div>
-    <div><span data-aos="grid-loading"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
+    <div><span data-aos="grid-loading" data-aos-duration="100"></span></div>
 </div>
+<div class="scroll-line" data-aos="animate-scroll" data-aos-offset="0"></div>
 <div class="wrapper">
-    <header class="header">
-        <a href="#" class="home link-line">
-            <span class="link-line__text">Home</span>
+    <header id="header" class="header">
+        <a href="#" class="home link-line link-line--left">
+            <span class="link-line__overflow">
+                <span class="link-line__text">Home</span>
+            </span>
         </a>
         <a href="#" class="logo">
             <img src="images/logo.svg" alt="Logo">
         </a>
-        <a href="#" class="about link-line">
-            <span class="link-line__text">About</span>
+        <a href="#" class="about link-line link-line--right">
+            <span class="link-line__overflow">
+                <span class="link-line__text">About</span>
+            </span>
         </a>
     </header>
     <main class="main-content">
-
+        <div class="site-guide">
+            <div id="currentSection" class="site-guide__number"></div>
+            <div id="sectionName" class="site-guide__section-name"></div>
+            <div id="sectionCount" class="site-guide__number"></div>
+        </div>
+        <section class="site-section" data-name="Home" data-number="1">
+            <div id="mainTitle" class="main-title">
+                <h2>
+                <span class="fade-1"
+                      data-aos="fade-zoom-in"
+                      data-aos-easing="ease-in-out"
+                      data-aos-duration="700"
+                      data-aos-delay="800"
+                      data-aos-offset="0">Hi! My name
+                </span>
+                    <span class="fade-2"
+                          data-aos="fade-zoom-in"
+                          data-aos-easing="ease-in-out"
+                          data-aos-duration="700"
+                          data-aos-delay="900"
+                          data-aos-offset="0">is Daria Doroshenkova
+                </span><br>
+                    <span class="fade-3"
+                          data-aos="fade-zoom-in"
+                          data-aos-easing="ease-in-out"
+                          data-aos-duration="700"
+                          data-aos-delay="1000"
+                          data-aos-offset="0">and I'm a mobile
+                </span>
+                    <span class="fade-4"
+                          data-aos="fade-zoom-in"
+                          data-aos-easing="ease-in-out"
+                          data-aos-duration="700"
+                          data-aos-delay="1100"
+                          data-aos-offset="0">& web UI/UX designer
+                </span>
+                </h2>
+            </div>
+        </section>
+        <section class="site-section" data-name="Work" data-number="2"></section>
+        <section class="site-section" data-name="Contacts" data-number="3"></section>
     </main>
     <footer class="footer">
 
