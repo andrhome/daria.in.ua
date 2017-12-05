@@ -2,25 +2,26 @@
  * Main header
  */
 .header {
+  @include flex-box(row, space-between, center);
   padding-top: 32px;
   position: relative;
-  a {
-    font-size: $font-size-big;
-    display: inline-block;
-  }
   &.fixed {
     width: 100%;
+    background: $color-white;
+    border-bottom: 1px solid $color-3--1;
+    padding: 34px 0 26px;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+    animation: linear fade-in 1s;
+    transition-delay: 0s;
     .home {
       display: block;
     }
     .logo {
       display: block;
       margin: 0 auto;
-      animation: ease-in-out fade-in-scale 1s;
-      transition-delay: 1s;
     }
   }
   .logo {
@@ -30,22 +31,12 @@
     animation: linear fade-in 1.5s;
     transition-delay: 2s;
   }
-  .home,
-  .about {
-    position: fixed;
-    top: 65px;
-    right: 0;
-    animation: linear fade-in 1.5s;
-    transition-delay: 2s;
-  }
   .home {
     display: none;
-    right: inherit;
-    left: 0;
-    transition-duration: 1s;
-    transition-delay: .5s;
   }
   .about {
     width: 284px;
+    animation: linear fade-in 2.5s;
+    transition-delay: 2s;
   }
 }

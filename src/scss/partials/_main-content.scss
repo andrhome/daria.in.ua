@@ -12,6 +12,8 @@
  */
 .link-line {
   width: 274px;
+  display: inline-block;
+  font-size: $font-size-big;
   color: $color-3--2;
   overflow: hidden;
   padding: 10px 0;
@@ -131,20 +133,16 @@
     display: inline-block;
     font-family: $font-regular;
     line-height: 14px;
-    color: $color-3--2;
   }
 }
 
 /**
  * Main title
  */
-.main-title {
-  padding: 21.5% 15px 0 8%;
-  h2 {
+.main-title-holder {
+  padding: 18.5% 15px 8% 8%;
+  .main-title {
     max-width: 842px;
-    font-family: $font-regular;
-    font-size: $font-size-st;
-    line-height: $font-size-st + 23;
     margin: 0 auto;
     span {
       display: inline-block;
@@ -152,6 +150,28 @@
   }
 }
 
+/**
+ * Site sections styles
+ */
 .site-section {
-  height: 1000px;
+  h1 {
+    font-size: $font-size-st;
+    line-height: $font-size-st + 23;
+  }
+  h2 {
+    font-size: $font-size-st;
+    line-height: $font-size-st + 10;
+    color: $color-1--1;
+    margin-bottom: 15px;
+  }
+  h5 {
+    font-size: $font-size-big;
+    color: $color-1--2;
+    margin-bottom: 10px;
+  }
 }
+
+.home-section {
+  margin-bottom: 22%;
+}
+

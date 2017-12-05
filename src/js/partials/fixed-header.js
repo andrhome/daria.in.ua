@@ -9,7 +9,7 @@
     });
 
     function fixingHeader(){
-        var $mainTitle = $('#mainTitle h2'),
+        var $mainTitle = $('#mainTitle'),
             mainTitleOffsetTop = $mainTitle.offset().top;
 
         if ($(window).scrollTop() >= mainTitleOffsetTop) {

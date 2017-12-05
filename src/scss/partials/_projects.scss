@@ -1,0 +1,127 @@
+/**
+ * Base projects styles
+ */
+.project {
+  position: relative;
+  padding: 0 0 10% 8.7%;
+  margin: 5% 0 5% 15%;
+  &__content {
+    position: relative;
+  }
+  &:hover {
+    .link-line {
+      display: block;
+    }
+    .project__bg {
+      opacity: 1;
+    }
+    .project__canvas {
+      background-color: rgba($color-2--2, 0);
+    }
+  }
+  &__canvas {
+    min-width: 490px;
+    min-height: 640px;
+    display: inline-block;
+    background-color: $color-3--4;
+    padding: 99px 20px 50px 245px;
+    position: relative;
+    z-index: 1;
+    transition: all .15s ease-in-out;
+  }
+  .project__title {
+    margin-bottom: 36px;
+  }
+  .project__subtitle {
+    margin-bottom: 69%;
+  }
+  &__bg {
+    width: 100%;
+    height: 120%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: all .15s ease-in-out;
+  }
+  &__img-holder {
+    width: 339px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
+  .link-line {
+    display: none;
+    width: 343px;
+    font-family: $font-light;
+    font-size: $font-size-big + 6;
+    color: $color-white;
+    margin-left: -10px;
+    &:hover {
+      color: $color-3--2;
+      .link-line__overflow {
+        &::after,
+        &::before {
+          background: $color-3--2;
+        }
+      }
+      .link-line__text {
+        color: $color-3--2;
+      }
+    }
+    &::before,
+    &::after {
+      background: $color-white;
+    }
+  }
+  .link-line__overflow {
+    &::after,
+    &::before {
+      background: $color-white;
+      top: 10px;
+    }
+  }
+}
+
+/** Zernobot project **/
+.project-zernobot {
+  &:hover {
+    .project__bg {
+      background: url('../images/projects/zernobot-bg.png') 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+  .project__canvas {
+    background-color: $color-2--2;
+  }
+  .project__title {
+    color: $color-white;
+  }
+  .project__subtitle {
+    color: $color-white;
+  }
+}
+
+/** Street Quest **/
+.project-street-quest {
+  &:hover {
+    .project__content {
+      background: url('../images/projects/zernobot-bg.png') 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+  .project__canvas {
+    background-color: $color-3--3;
+  }
+  .project__title {
+    color: $color-white;
+  }
+  .project__subtitle {
+    color: $color-white;
+  }
+}

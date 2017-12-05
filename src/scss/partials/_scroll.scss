@@ -17,11 +17,9 @@
  */
 .scroll-line {
   background: transparent;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 80%;
   overflow: hidden;
+  margin: 0 auto;
+  position: relative;
   z-index: 2;
   &, &::after {
     width: 3px;
