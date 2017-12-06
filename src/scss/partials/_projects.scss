@@ -3,20 +3,25 @@
  */
 .project {
   position: relative;
-  padding: 0 0 10% 8.7%;
-  margin: 5% 0 5% 15%;
   &__content {
     position: relative;
-  }
-  &:hover {
-    .link-line {
-      display: block;
-    }
-    .project__bg {
-      opacity: 1;
-    }
-    .project__canvas {
-      background-color: rgba($color-2--2, 0);
+    margin: 0 0 29% 23.8%;
+    &:hover {
+      .link-line {
+        display: block;
+      }
+      .project__bg {
+        display: block;
+        transform: scale(1);
+      }
+      .project__canvas {
+        box-shadow: none;
+        background-color: rgba($color-2--2, 0);
+      }
+      & + .project__bg {
+        display: block;
+        transform: scale(1);
+      }
     }
   }
   &__canvas {
@@ -24,10 +29,14 @@
     min-height: 640px;
     display: inline-block;
     background-color: $color-3--4;
+    box-shadow: 0 0 15px 3px $color-3--4;
     padding: 99px 20px 50px 245px;
     position: relative;
     z-index: 1;
     transition: all .15s ease-in-out;
+  }
+  &__wrap {
+    @include flex-box(row, space-between, center);
   }
   .project__title {
     margin-bottom: 36px;
@@ -38,18 +47,19 @@
   &__bg {
     width: 100%;
     height: 120%;
-    opacity: 0;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     z-index: 0;
-    transition: all .15s ease-in-out;
+    display: none;
+    transform: scale(0);
+    transition: all .2s ease-in-out;
   }
   &__img-holder {
     width: 339px;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -29%;
+    left: -11%;
     z-index: 1;
     img {
       width: 100%;
@@ -78,50 +88,115 @@
     &::after {
       background: $color-white;
     }
-  }
-  .link-line__overflow {
-    &::after,
-    &::before {
-      background: $color-white;
-      top: 10px;
+    &__overflow {
+      &::after,
+      &::before {
+        background: $color-white;
+        top: 10px;
+      }
     }
   }
 }
 
 /** Zernobot project **/
 .project-zernobot {
-  &:hover {
-    .project__bg {
-      background: url('../images/projects/zernobot-bg.png') 0 0 no-repeat;
-      background-size: cover;
-    }
+  &__content {
+    margin-bottom: 35%;
   }
   .project__canvas {
     background-color: $color-2--2;
+    box-shadow: 0 0 15px 3px darken($color-2--2, 15%);
   }
   .project__title {
     color: $color-white;
   }
   .project__subtitle {
     color: $color-white;
+  }
+  .project__bg {
+    background: url('../images/projects/zernobot-bg.png') 0 0 no-repeat;
+    background-size: cover;
+  }
+}
+
+/** Logbook **/
+.project-logbook {
+  position: relative;
+  .project__content {
+    margin: 0 0 20% 23.8%;
+  }
+  .project__canvas {
+    min-width: inherit;
+    width: 60%;
+    min-height: inherit;
+    height: 50%;
+    padding: 99px 20px 50px 200px;
+  }
+  .project__title {
+    color: $color-2--1;
+    line-height: normal;
+    margin-right: 30px;
+    margin-bottom: 60px;
+  }
+  .project__subtitle {
+    color: $color-2--1;
+  }
+  .project__img-holder {
+    width: 600px;
+  }
+  .link-line {
+    color: $font-color;
+    &::before,
+    &::after {
+      background: $font-color;
+    }
+    &__overflow {
+      &::after,
+      &::before {
+        background: $font-color;
+        top: 10px;
+      }
+    }
+  }
+  .project__bg {
+    height: 160%;
+    top: 0;
+    background: url('../images/projects/logbook-bg.png') 0 0 no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      width: 20%;
+      height: 100%;
+      background: url('../images/projects/logbook-kia.png') 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+  .logbook-kia {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
 
 /** Street Quest **/
 .project-street-quest {
-  &:hover {
-    .project__content {
-      background: url('../images/projects/zernobot-bg.png') 0 0 no-repeat;
-      background-size: cover;
-    }
-  }
+  position: relative;
   .project__canvas {
     background-color: $color-3--3;
+    box-shadow: 0 0 15px 3px darken($color-3--3, 15%);
   }
   .project__title {
     color: $color-white;
   }
   .project__subtitle {
     color: $color-white;
+  }
+  .project__bg {
+    height: 160%;
+    top: 0;
+    background: url('../images/projects/street-quest-bg.png') 0 0 no-repeat;
+    background-size: cover;
   }
 }
