@@ -3,40 +3,49 @@
  */
 .project {
   position: relative;
+  margin-bottom: 100px;
+  &:hover {
+    .link-line {
+      display: block;
+    }
+    .project__bg {
+      display: block;
+      transform: scale(1);
+    }
+    .project__canvas {
+      box-shadow: none;
+      background-color: rgba($color-2--2, 0);
+    }
+    & + .project__bg {
+      display: block;
+      transform: scale(1);
+    }
+  }
   &__content {
     position: relative;
-    margin: 0 0 29% 23.8%;
-    &:hover {
-      .link-line {
-        display: block;
-      }
-      .project__bg {
-        display: block;
-        transform: scale(1);
-      }
-      .project__canvas {
-        box-shadow: none;
-        background-color: rgba($color-2--2, 0);
-      }
-      & + .project__bg {
-        display: block;
-        transform: scale(1);
-      }
-    }
+    margin-left: 25.6%;
   }
   &__canvas {
     min-width: 490px;
     min-height: 640px;
     display: inline-block;
     background-color: $color-3--4;
-    box-shadow: 0 0 15px 3px $color-3--4;
+    box-shadow: 0 0 13px 1px $color-3--4;
     padding: 99px 20px 50px 245px;
     position: relative;
     z-index: 1;
     transition: all .15s ease-in-out;
   }
-  &__wrap {
+  &__title-holder {
     @include flex-box(row, space-between, center);
+    margin-bottom: 35px;
+  }
+  &__wrap {
+    width: 680px;
+    float: right;
+    margin: 0 18% 63px 0;
+    position: relative;
+    z-index: 1;
   }
   .project__title {
     margin-bottom: 36px;
@@ -59,11 +68,8 @@
     width: 339px;
     position: absolute;
     bottom: -29%;
-    left: -11%;
+    left: -11.5%;
     z-index: 1;
-    img {
-      width: 100%;
-    }
   }
   .link-line {
     display: none;
@@ -96,16 +102,24 @@
       }
     }
   }
+  &--full-screen {
+    padding: 10% 0;
+    .project__bg {
+      height: 100%;
+      top: 0;
+    }
+  }
 }
 
 /** Zernobot project **/
 .project-zernobot {
+  padding-bottom: 10%;
   &__content {
     margin-bottom: 35%;
   }
   .project__canvas {
     background-color: $color-2--2;
-    box-shadow: 0 0 15px 3px darken($color-2--2, 15%);
+    box-shadow: 0 0 13px 1px darken($color-2--2, 15%);
   }
   .project__title {
     color: $color-white;
@@ -122,27 +136,40 @@
 /** Logbook **/
 .project-logbook {
   position: relative;
+  padding: 22% 0 5%;
   .project__content {
-    margin: 0 0 20% 23.8%;
+    margin-left: 0;
+    @include clearfix;
   }
   .project__canvas {
     min-width: inherit;
-    width: 60%;
+    width: 35%;
     min-height: inherit;
-    height: 50%;
-    padding: 99px 20px 50px 200px;
+    height: 85%;
+    padding: 0;
+    position: absolute;
+    top: -18%;
+    right: 13%;
   }
   .project__title {
     color: $color-2--1;
     line-height: normal;
     margin-right: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
   .project__subtitle {
     color: $color-2--1;
+    margin-bottom: 0;
   }
   .project__img-holder {
-    width: 600px;
+    max-width: 715px;
+    width: auto;
+    display: block;
+    padding-left: 4.2%;
+    margin: 0 auto;
+    position: relative;
+    bottom: inherit;
+    left: inherit;
   }
   .link-line {
     color: $font-color;
@@ -159,8 +186,6 @@
     }
   }
   .project__bg {
-    height: 160%;
-    top: 0;
     background: url('../images/projects/logbook-bg.png') 0 0 no-repeat;
     background-size: cover;
     &::before {
@@ -174,28 +199,27 @@
   .logbook-kia {
     width: 20%;
     position: absolute;
-    top: 50%;
+    top: 32%;
     left: 0;
-    transform: translateY(-50%);
   }
 }
 
 /** Street Quest **/
 .project-street-quest {
   position: relative;
+  padding: 8.3% 0 15.5%;
   .project__canvas {
     background-color: $color-3--3;
-    box-shadow: 0 0 15px 3px darken($color-3--3, 15%);
+    box-shadow: 0 0 13px 1px darken($color-3--3, 15%);
   }
   .project__title {
-    color: $color-white;
+
   }
   .project__subtitle {
     color: $color-white;
+    margin-bottom: 45%;
   }
   .project__bg {
-    height: 160%;
-    top: 0;
     background: url('../images/projects/street-quest-bg.png') 0 0 no-repeat;
     background-size: cover;
   }

@@ -6,14 +6,6 @@
   }
 }
 
-$wrapper_width: 1680px;
-
-.wrapper_section {
-  width: 100%;
-  max-width: $wrapper_width;
-  margin: 0 auto;
-}
-
 @mixin flex-box($flex-direction, $justify-content, $align-items) {
   display: flex;
   flex-direction: $flex-direction;

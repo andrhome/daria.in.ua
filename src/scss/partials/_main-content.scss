@@ -8,6 +8,15 @@
 }
 
 /**
+ * Base container
+ */
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/**
  * Animated link with line
  */
 .link-line {
