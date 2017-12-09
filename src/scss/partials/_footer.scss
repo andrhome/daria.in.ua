@@ -1,0 +1,13 @@
+/**
+ * Main Footer
+ */
+.footer {
+    background: lighten($color-3--4, 4%);
+    &__content {
+        color: $font-color-2;
+        @include flex-box(row, space-between, center);
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

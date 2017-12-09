@@ -8,18 +8,18 @@
     .link-line {
       display: block;
     }
-    .project__bg {
-      display: block;
-      transform: scale(1);
-    }
-    .project__canvas {
-      box-shadow: none;
-      background-color: rgba($color-2--2, 0);
-    }
-    & + .project__bg {
-      display: block;
-      transform: scale(1);
-    }
+    //.project__bg {
+    //  display: block;
+    //  transform: scale(1);
+    //}
+    //.project__canvas {
+    //  box-shadow: none;
+    //  background-color: rgba($color-2--2, 0);
+    //}
+    //& + .project__bg {
+    //  display: block;
+    //  transform: scale(1);
+    //}
   }
   &__content {
     position: relative;
@@ -34,7 +34,7 @@
     padding: 99px 20px 50px 245px;
     position: relative;
     z-index: 1;
-    transition: all .15s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   &__title-holder {
     @include flex-box(row, space-between, center);
@@ -45,7 +45,7 @@
     float: right;
     margin: 0 18% 63px 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .project__title {
     margin-bottom: 36px;
@@ -61,7 +61,7 @@
     bottom: 0;
     z-index: 0;
     display: none;
-    transform: scale(0);
+    //transform: scale(0);
     transition: all .2s ease-in-out;
   }
   &__img-holder {
@@ -74,7 +74,6 @@
   .link-line {
     display: none;
     width: 343px;
-    font-family: $font-light;
     font-size: $font-size-big + 6;
     color: $color-white;
     margin-left: -10px;
@@ -205,7 +204,7 @@
 }
 
 /** Street Quest **/
-.project-street-quest {
+.project-street-quests {
   position: relative;
   padding: 8.3% 0 15.5%;
   .project__canvas {

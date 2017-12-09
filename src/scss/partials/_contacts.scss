@@ -2,5 +2,110 @@
  * Contacts section
  */
 .contacts {
+    @include flex-box(row, space-between, center);
     background: lighten($color-3--4, 4%);
+    padding: 11% 0 120px;
+    .container {
+        @include flex-box(row, space-between, flex-start);
+    }
+    a {
+        font-size: $font-size-big - 4;
+        display: inline-block;
+        color: $font-color;
+        margin-bottom: 22px;
+        &:hover {
+            color: $color-3--2;
+        }
+    }
+    &__info {
+        width: 50%;
+    }
+    &__title {
+        line-height: $font-size-st + 17px;
+        margin-bottom: 26.5%;
+    }
+    &__subtitle {
+        margin-bottom: 47px;
+    }
+    &__cols-wrap {
+        @include flex-box(row, space-between, flex-start);
+        flex-wrap: wrap;
+    }
+    &__col {
+        min-width: 167px;
+        &:first-child {
+            margin: 0 20px 30px 0;
+        }
+    }
+}
+
+/**
+ * Feedback form
+ */
+.feedback-form {
+    width: 100%;
+    max-width: 416px;
+    .form-group {
+        display: block;
+        &:not(:first-child) {
+            margin-top: 70px;
+        }
+        & > * {
+            width: 100%;
+            display: block;
+        }
+    }
+    .label-text {
+        font-size: $font-size-big + 6;
+        color: $color-3--2;
+        margin-bottom: 10px;
+    }
+    .form-field {
+        height: 48px;
+        font-size: $font-size-big - 4;
+        line-height: $font-size-big;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $color-3--2;
+        outline: none;
+        padding: 10px 0;
+        &::-webkit-input-placeholder {
+            font-family: $font-regular;
+            color: $color-3--1;
+        }
+        &::-moz-placeholder {
+            font-family: $font-regular;
+            color: $color-3--1;
+        }
+        &:-ms-input-placeholder {
+            font-family: $font-regular;
+            color: $color-3--1;
+        }
+        &--textarea {
+            height: 180px;
+            resize: none;
+        }
+    }
+    .link-line {
+        width: 180px;
+        text-align: left;
+        color: $font-color;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        margin-top: 35px;
+        margin-left: -10px;
+        &:hover {
+            .link-line__overflow {
+                &::before, &::after{
+                    background: $color-1--1;
+                }
+            }
+        }
+        .link-line__overflow {
+            &::before, &::after{
+                background: $font-color;
+            }
+        }
+    }
 }

@@ -126,7 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="project project--full-screen project-street-quest"
+        <div class="project project--full-screen project-street-quests"
              data-aos="fade-zoom-in"
              data-aos-easing="ease-in-out"
              data-aos-duration="1000"
@@ -151,7 +151,7 @@
         </div>
     </section>
     <section class="site-section contacts" data-name="Contacts" data-number="3">
-        <div class="container">
+        <div class="container container--resize">
             <div class="contacts__info">
                 <h2 class="contacts__title"
                     data-aos="fade-zoom-in"
@@ -161,16 +161,20 @@
                     data-aos-offset="0">Say Hello to me<br> the way you like!</h2>
                 <div class="contacts__cols-wrap">
                     <div class="contacts__col">
-                        <h5 class="contacts__subtitle">Contact</h5>
-                        <a href="mailto:daria.doroshenkova@gmail.com">daria.doroshenkova@gmail.com</a>
-                        <a href="tel:+380631903299">+38 (063) 190 32 99</a>
+                        <h4 class="contacts__subtitle">Contact</h4>
+                        <ul>
+                            <li><a href="mailto:daria.doroshenkova@gmail.com">daria.doroshenkova@gmail.com</a></li>
+                            <li><a href="tel:+380631903299">+38 (063) 190 32 99</a></li>
+                        </ul>
                     </div>
                     <div class="contacts__col">
-                        <h5 class="contacts__subtitle">Social media</h5>
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Behance</a>
-                        <a href="#">Linkedin</a>
+                        <h4 class="contacts__subtitle">Social media</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/daria.doroshenkova" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/daria.doroshenkova/" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.behance.net/dariakhudenko" target="_blank">Behance</a></li>
+                            <li><a href="https://www.linkedin.com/in/daria-doroshenkova-04950311a/" target="_blank">Linkedin</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -178,17 +182,17 @@
                 <form action="#">
                     <label class="form-group">
                         <span class="label-text">Name</span>
-                        <input type="text" class="form-field" placeholder="Name">
+                        <input type="text" class="form-field" placeholder="Name" required>
                     </label>
                     <label class="form-group">
                         <span class="label-text">E-mail</span>
-                        <input type="text" class="form-field" placeholder="E-mail">
+                        <input type="email" class="form-field" placeholder="E-mail" required>
                     </label>
-                    <label class="form-group">
+                    <label class="form-group form-group">
                         <span class="label-text">Message</span>
-                        <textarea class="form-field form-field--textarea" placeholder="Message"></textarea>
+                        <textarea class="form-field form-field--textarea" placeholder="Message" required></textarea>
                     </label>
-                    <button type="submit" class="link-line">
+                    <button type="submit" class="link-line link-line--right">
                         <span class="link-line__overflow">
                             <span class="link-line__text">Send</span>
                         </span>
@@ -198,7 +202,7 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="container footer__content">
+        <div class="container container--resize footer__content">
             <div class="copyright">&copy; 2017 Daria Doroshenkova. All rights reserved</div>
             <div class="made-by">
                 Made by Daria Doroshenkova

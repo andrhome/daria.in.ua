@@ -1,5 +1,5 @@
 /**
- * Setting right site guide
+ * Right site guide
  */
 ;(function() {
     'use strict';
@@ -65,7 +65,7 @@
 
     function setSiteGuide(i) {
         if ( $($sections[i]).offset() ) {
-            var startPoint = $($sections[i]).offset().top;
+            var startPoint = $($sections[i]).offset().top - 250;
 
             if ($(window).scrollTop() > startPoint) {
                 var sectionName = $($sections[i]).data('name'),

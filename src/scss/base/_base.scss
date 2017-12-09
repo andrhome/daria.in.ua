@@ -19,3 +19,23 @@ a {
 	color: $color-3--2;
 	text-decoration: none;
 }
+h1 {
+	font-size: $font-size-st;
+	line-height: $font-size-st + 23;
+}
+h2 {
+	font-size: $font-size-st;
+	line-height: $font-size-st + 10;
+	color: $color-1--1;
+	margin-bottom: 15px;
+}
+h4 {
+	font-size: $font-size-big + 6;
+	color: $color-3--2;
+	margin-bottom: 15px;
+}
+h5 {
+	font-size: $font-size-big;
+	color: $color-1--2;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,74 @@
+/**
+ * About page styles
+ */
+.about-page {
+    .header {
+        padding-top: 108px;
+        .logo {
+            margin-left: 30px;
+        }
+    }
+}
+
+/**
+ * About block
+ */
+.about {
+    padding: 28px 0 70px;
+    @include clearfix;
+    &__container {
+        width: 78%;
+        max-width: 1432px;
+        @include flex-box(row, space-between, flex-start);
+        float: right;
+        padding: 0 0 0 25px;
+        margin-right: 9%;
+    }
+    &__text {
+        width: 53%;
+        color: $font-color-3;
+        padding-top: 80px;
+        p {
+            font-size: $font-size-big - 4;
+            line-height: $font-size-big + 14;
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        font-size: $font-size-most-large;
+        color: $color-3--2;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        span {
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+        &::before, &::after {
+            content: '';
+            width: 374px;
+            background: $color-1--1;
+            position: absolute;
+        }
+        &::before {
+            height: 270px;
+            top: -20px;
+            left: -28px;
+            opacity: .3;
+            z-index: 2;
+        }
+        &::after {
+            height: 173px;
+            top: -55px;
+            left: 80px;
+            opacity: .3;
+            z-index: 1;
+        }
+    }
+    &__photo {
+        img {
+            width: 100%;
+        }
+    }
+}
