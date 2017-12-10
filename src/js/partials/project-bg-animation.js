@@ -5,6 +5,9 @@
   'use strict';
 
   var $projects = $('.project');
+  var $projectPage = $('.project-page');
+
+  if ($projectPage.length > 0) return;
 
   $projects.on('mouseover', function () {
     var $this = $(this);

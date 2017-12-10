@@ -4,22 +4,22 @@
 .project {
   position: relative;
   margin-bottom: 100px;
-  &:hover {
+  &:hover, &.active {
     .link-line {
       display: block;
     }
-    //.project__bg {
-    //  display: block;
-    //  transform: scale(1);
-    //}
-    //.project__canvas {
-    //  box-shadow: none;
-    //  background-color: rgba($color-2--2, 0);
-    //}
-    //& + .project__bg {
-    //  display: block;
-    //  transform: scale(1);
-    //}
+  }
+  &.active {
+    .project__bg {
+      display: block;
+    }
+    .project__canvas {
+      box-shadow: none;
+      background-color: rgba($color-2--2, 0);
+    }
+    & + .project__bg {
+      display: block;
+    }
   }
   &__content {
     position: relative;
@@ -221,5 +221,17 @@
   .project__bg {
     background: url('../images/projects/street-quest-bg.png') 0 0 no-repeat;
     background-size: cover;
+  }
+}
+
+/**
+ * Styles for projects pages
+ */
+.project-page {
+  .header {
+    display: none;
+    &.fixed {
+      display: flex;
+    }
   }
 }

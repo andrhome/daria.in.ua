@@ -3,9 +3,21 @@
  */
 .about-page {
     .header {
-        padding-top: 108px;
+        padding-left: 0;
         .logo {
             margin-left: 30px;
+        }
+        .link-line {
+            color: $color-1--1;
+            .link-line__overflow {
+                &::before,
+                &::after {
+                    background: $color-1--1;
+                }
+            }
+            .link-line__text {
+                color: $color-1--1;
+            }
         }
     }
 }
