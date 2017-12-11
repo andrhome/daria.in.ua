@@ -9,17 +9,18 @@
     width: 100%;
     background: $color-white;
     border-bottom: 1px solid $color-3--1;
-    padding: 34px 0 26px;
+    padding: 15px 0 10px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     animation: linear fade-in 1s;
     transition-delay: 0s;
-    .home {
+    .home-link {
       display: block;
     }
     .logo {
+      width: 270px;
       display: block;
       margin: 0 auto;
     }
@@ -31,10 +32,10 @@
     animation: linear fade-in 1.5s;
     transition-delay: 2s;
   }
-  .home {
+  .home-link {
     display: none;
   }
-  .about {
+  .about-link {
     width: 284px;
     animation: linear fade-in 2.5s;
     transition-delay: 2s;
