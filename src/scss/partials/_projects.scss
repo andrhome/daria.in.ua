@@ -6,19 +6,19 @@
   margin-bottom: 100px;
   &:hover, &.active {
     .link-line {
-      display: block;
+      opacity: 1 !important;
     }
   }
   &.active {
     .project__bg {
-      display: block;
+      display: block !important;
     }
     .project__canvas {
-      box-shadow: none;
-      background-color: rgba($color-2--2, 0);
+      box-shadow: none !important;
+      background-color: rgba($color-2--2, 0) !important;
     }
     & + .project__bg {
-      display: block;
+      display: block !important;
     }
   }
   &__content {
@@ -72,10 +72,10 @@
     z-index: 1;
   }
   .link-line {
-    display: none;
     width: 343px;
     font-size: $font-size-big + 6;
     color: $color-white;
+    opacity: 0;
     margin-left: -10px;
     &:hover {
       color: $color-3--2;
