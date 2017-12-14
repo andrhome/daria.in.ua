@@ -1,0 +1,77 @@
+/**
+ * Styles for Style Guide blocks with colors and font description
+ */
+.style-guide {
+  margin-bottom: 105px;
+  &__top-row {
+    margin: -60px 0 0 19%;
+    .style-guide__title {
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+  .colors-blocks {
+    @include flex-box(row, center, center);
+    padding: 60px 0 128px;
+    &__item {
+      text-align: center;
+      margin: 0 40px;
+    }
+    &__circle {
+      width: 180px;
+      height: 180px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid $color-3--2;
+      background: $color-white;
+      margin-bottom: 43px;
+    }
+    &__text {
+      font-size: $font-size-lg - 4;
+      color: $font-color-3;
+    }
+  }
+  .font-block {
+    color: $font-color-3;
+    &__title {
+      text-align: center;
+      color: $font-color-3;
+    }
+    &__subtitle {
+      margin-bottom: 30px;
+    }
+    &__text-box {
+      width: 46%;
+      max-width: 590px;
+      font-size: $font-size-lg - 4;
+      margin-bottom: 15px;
+      &--light {
+        font-family: $font-light;
+      }
+      &--bold {
+        width: 50%;
+        max-width: 612px;
+        font-family: $font-bold;
+        margin-top: 120px;
+      }
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &--zernobot {
+    .colors-blocks__item-1 {
+      .colors-blocks__circle {
+        background: linear-gradient(to bottom, #072c2c, #0a8383);
+        border-color: transparent;
+      }
+    }
+    .colors-blocks__item-2 {
+      .colors-blocks__circle {
+        background: $color-3--5;
+      }
+    }
+  }
+}

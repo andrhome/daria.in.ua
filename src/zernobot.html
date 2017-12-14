@@ -20,12 +20,12 @@
 <div class="wrapper">
     <section class="home-section">
         <header id="header" class="header">
-            <a href="#" class="home-link link-line link-line--left go-to-top">
+            <a href="index.html" class="home-link link-line link-line--left go-to-top">
             <span class="link-line__overflow">
                 <span class="link-line__text">Home</span>
             </span>
             </a>
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo.svg" alt="Logo">
             </a>
             <a href="about.html" class="about-link link-line link-line--right">
@@ -58,21 +58,84 @@
         </div>
         <div class="scroll-line fixed-header-flag" data-aos="animate-scroll" data-aos-offset="0"></div>
     </section>
-    <section class="project-description" style="height: 1000px;">
-        <div class="title-row">
-            <h2 class="project-description__title">Issue</h2>
-            <p>Create a landing page and <br> logo for Telegram bot</p>
+    <section class="project-description">
+        <div class="container-holder"
+             data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-out"
+             data-aos-duration="800"
+             data-aos-delay="500"
+             data-aos-offset="0">
+            <div class="gardient-block gardient-block--left"></div>
+            <div class="gardient-block gardient-block--right"></div>
+            <div class="container container--resize">
+                <div class="title-row">
+                    <h2 class="project-description__title">Issue</h2>
+                    <p>Create a landing page and <br> logo for Telegram bot</p>
+                </div>
+                <div class="project-main-image">
+                    <picture>
+                        <source media="(min-width: 769px)" srcset="images/zernobot/zernobot-behance.png">
+                        <img src="images/zernobot/zernobot-behance-mobile.jpg" alt="Zernobot behance">
+                    </picture>
+                </div>
+            </div>
         </div>
-        <div class="project-main-image">
-            <picture>
-                <source media="(min-width: 769px)" srcset="images/projects/mockup_1.png">
-                <img src="images/zernobot/zernobot-behance.png" alt="Zernobot behance">
-            </picture>
+        <picture class="image-block">
+            <source media="(min-width: 769px)" srcset="images/zernobot/bg.png">
+            <img src="images/zernobot/bg-mobile.png" alt="Image">
+        </picture>
+        <div class="style-guide style-guide--zernobot container container--resize">
+            <div class="style-guide__top-row">
+                <h2 class="style-guide__title">Colors</h2>
+                <div class="colors-blocks">
+                    <div class="colors-blocks__item colors-blocks__item-1">
+                        <div class="colors-blocks__circle"></div>
+                        <div class="colors-blocks__text">#072C2C to #0A8383</div>
+                    </div>
+                    <div class="colors-blocks__item colors-blocks__item-2">
+                        <div class="colors-blocks__circle"></div>
+                        <div class="colors-blocks__text">#F3F5F5</div>
+                    </div>
+                    <div class="colors-blocks__item colors-blocks__item-3">
+                        <div class="colors-blocks__circle"></div>
+                        <div class="colors-blocks__text">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="style-guide__title">Type</h2>
+            <div class="font-block">
+                <h2 class="font-block__title">Proxima Nova</h2>
+                <div class="font-block__text-box">
+                    <div class="font-block__subtitle">Regular</div>
+                    <p>Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй</p>
+                    <p>Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф</p>
+                    <p>Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя</p>
+                </div>
+                <div class="font-block__text-box font-block__text-box--light pull-right">
+                    <div class="font-block__subtitle">Light</div>
+                    <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn</p>
+                    <p>Oo Pp Qq Rr Ss Tt Uu Vv Xx Ww Yy Zz</p>
+                </div>
+                <div class="font-block__text-box font-block__text-box--bold">
+                    <div class="font-block__subtitle">Bold</div>
+                    <p>Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Йй</p>
+                    <p>Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф</p>
+                    <p>Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя</p>
+                </div>
+            </div>
         </div>
-
     </section>
-    <footer class="footer">
-
+    <footer class="footer project-footer">
+        <a href="about.html" class="about-link link-line link-line--left">
+            <span class="link-line__overflow">
+                <span class="link-line__text">Previous project</span>
+            </span>
+        </a>
+        <a href="about.html" class="about-link link-line link-line--right">
+            <span class="link-line__overflow">
+                <span class="link-line__text">Next project</span>
+            </span>
+        </a>
     </footer>
 </div>
 <script src="vendor/js/jquery.min.js"></script>

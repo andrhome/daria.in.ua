@@ -14,10 +14,18 @@
   width: 100%;
   max-width: 1280px;
   padding: 0 25px;
+  box-sizing: content-box;
   margin: 0 auto;
   &--resize {
     width: 70%;
   }
+}
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
 
 /**
