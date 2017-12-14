@@ -6,19 +6,19 @@
   margin-bottom: 100px;
   &:hover, &.active {
     .link-line {
-      opacity: 1 !important;
+      opacity: 1;
     }
   }
   &.active {
     .project__bg {
-      display: block !important;
+      display: block;
     }
     .project__canvas {
-      box-shadow: none !important;
-      background-color: rgba($color-2--2, 0) !important;
+      box-shadow: none;
+      background-color: rgba($color-2--2, 0);
     }
     & + .project__bg {
-      display: block !important;
+      display: block;
     }
   }
   &__content {
@@ -61,7 +61,6 @@
     bottom: 0;
     z-index: 0;
     display: none;
-    //transform: scale(0);
     transition: all .2s ease-in-out;
   }
   &__img-holder {
@@ -187,6 +186,7 @@
   .project__bg {
     background: url('../images/projects/logbook-bg.png') 0 0 no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     &::before {
       content: '';
       width: 20%;
@@ -221,6 +221,7 @@
   .project__bg {
     background: url('../images/projects/street-quest-bg.png') 0 0 no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -233,5 +234,39 @@
     &.fixed {
       display: flex;
     }
+  }
+  .project-zernobot {
+    margin: 0;
+    .project__content {
+      padding-bottom: 9%;
+    }
+    .project__bg {
+      height: 110%;
+      //background-size: contain;
+      //background-attachment: fixed;
+      //background-position: 121% -32px;
+    }
+    .project__canvas {
+      height: 520px;
+      min-height: inherit;
+      padding-top: 175px;
+    }
+  }
+  .intro-box {
+    width: 240px;
+    font-size: $font-size-big;
+    line-height: $font-size-big + 8;
+    color: $font-color-3;
+    position: absolute;
+    top: 107%;
+    right: 26%;
+    &__date {
+      font-size: $font-size-big + 6;
+      color: $color-3--2;
+      margin-bottom: 20px;
+    }
+  }
+  .scroll-line {
+    margin-top: -60px;
   }
 }
