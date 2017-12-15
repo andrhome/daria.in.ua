@@ -8,5 +8,6 @@ $(document).ready(function () {
     //= partials/site-guide.js
     //= partials/go-to-top.js
     //= partials/project-bg-animation.js
+    //= partials/form-validation.js
 
 });
