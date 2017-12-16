@@ -1,0 +1,166 @@
+/**
+ * Styles for projects pages
+ */
+.project-page {
+  .header {
+    display: none;
+    &.fixed {
+      display: flex;
+    }
+  }
+  .container-holder {
+    position: relative;
+  }
+  .intro-box {
+    font-family: $font-light;
+    font-size: $font-size-big;
+    line-height: $font-size-big + 8;
+    color: $font-color-3;
+    &__date {
+      font-size: $font-size-big + 6;
+      color: $color-3--2;
+      margin-bottom: 20px;
+    }
+  }
+  .scroll-line {
+    margin-top: -60px;
+  }
+  h2 {
+    color: $color-3--1;
+  }
+  .title-row {
+    font-family: $font-light;
+    font-size: $font-size-big;
+    line-height: $font-size-big + 8;
+    color: $font-color-3;
+    margin-bottom: 7.2%;
+    h2 {
+      margin-bottom: 4.8%;
+    }
+  }
+}
+
+/**
+ * Styles for Zernobot project page
+ */
+.zernobot-project-page {
+  .project-zernobot {
+    margin: 0;
+    .project__content {
+      padding-bottom: 9%;
+    }
+    .project__bg {
+      height: 110%;
+      //background-size: contain;
+      //background-attachment: fixed;
+      //background-position: 121% -32px;
+    }
+    .project__canvas {
+      height: 520px;
+      min-height: inherit;
+      padding-top: 175px;
+    }
+  }
+  .intro-box {
+    max-width: 300px;
+    position: absolute;
+    top: 107%;
+    right: 26%;
+  }
+  .project-main-image {
+    box-shadow: 0 0 22px 0 lighten($color-3--2, 10%);
+    position: relative;
+    z-index: 1;
+  }
+  .gradient-block {
+    width: 50%;
+    height: 27%;
+    max-height: 850px;
+    position: absolute;
+    background: rgb(28,97,138);
+    background: -moz-linear-gradient(top, rgb(28,97,138) 0%, rgb(46,98,111) 25%, rgb(61,110,115) 50%, rgb(71,121,122) 75%, rgb(79,128,124) 100%);
+    background: -webkit-linear-gradient(top, rgb(28,97,138) 0%,rgb(46,98,111) 25%,rgb(61,110,115) 50%,rgb(71,121,122) 75%,rgb(79,128,124) 100%);
+    background: linear-gradient(to bottom, rgb(28,97,138) 0%,rgb(46,98,111) 25%,rgb(61,110,115) 50%,rgb(71,121,122) 75%,rgb(79,128,124) 100%);
+    &--left {
+      top: 14%;
+      left: 0;
+    }
+    &--right {
+      bottom: 20%;
+      right: 0;
+    }
+  }
+  .image-block {
+    width: 55%;
+    display: block;
+    margin-top: -11%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/**
+ * Styles for Logbook project page
+ */
+.logbook-project-page {
+  .home-section {
+    margin-bottom: 12%;
+  }
+  .project-logbook {
+    padding: 10% 0 0;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 30%;
+      background: url('../images/logbook/blot.png') 0 0 no-repeat;
+      background-size: cover;
+      padding: 13.8% 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+    .logbook-kia {
+      top: 24%;
+    }
+    .project__bg {
+      height: 100%;
+      bottom: 100px;
+      border-bottom: 1px solid $color-3--1;
+    }
+  }
+  .project__wrap {
+    float: none;
+    padding-left: 11%;
+    margin: 0 auto 63px;
+  }
+  .project__img-holder {
+    max-width: 635px;
+    padding-left: 0;
+  }
+  .intro-box {
+    max-width: 460px;
+  }
+  .scroll-line {
+    margin-top: -80px;
+  }
+  .title-row {
+    @include flex-box(row, space-between, flex-start);
+    margin-bottom: 10%;
+    .img-block {
+      width: 25%;
+      padding-top: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    .text-block {
+      width: 50%;
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

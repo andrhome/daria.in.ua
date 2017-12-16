@@ -5,40 +5,44 @@
   'use strict';
 
   var $feedbackForm = $('#feedbackForm');
-  var fbFormEmptyIsValid = false;
-  var fbFormEmailIsValid = false;
 
   $feedbackForm.on('submit', function (e) {
     e.preventDefault();
 
-    checkOnEmptyField($(this));
-    checkEmail($(this));
-
-    if (fbFormEmptyIsValid && fbFormEmailIsValid) {
-      sendForm($(this));
+    if (checkOnEmptyField($(this))) {
+      if (checkEmail($(this))) {
+        console.log('submit');
+        sendForm($(this));
+        clearFields($(this));
+      }
     }
   });
 
   function checkOnEmptyField($form) {
     var $fields = $form.find('.form-field');
+    var fieldCount = 0;
 
     $.each($fields, function (i, item) {
       if ($(item).val() === '') {
         $(item).parent().addClass('required-error');
-        fbFormEmptyIsValid = false;
+        fieldCount -= 1;
+      } else {
+        fieldCount += 1;
       }
     });
 
     $fields.on('keypress', function () {
       $(this).parent().removeClass('required-error email-error');
-      fbFormEmptyIsValid = true;
     });
 
+    if (fieldCount === $fields.length) {
+      return true;
+    }
   }
 
   function checkEmail($form) {
-    var $emailField = $form.find('.form-field-email'),
-      emailVal = $emailField.val();
+    var $emailField = $form.find('.form-field-email');
+    var emailVal = $emailField.val();
 
     if ($emailField.length <= 0) return;
 
@@ -46,10 +50,10 @@
 
     if (!regex.test(emailVal)) {
       $emailField.parent().addClass('email-error');
-      fbFormEmailIsValid = false;
+      return false;
     } else {
       $emailField.parent().removeClass('email-error');
-      fbFormEmailIsValid = true;
+      return true;
     }
   }
 
@@ -57,11 +61,20 @@
     $.ajax({
       type: 'POST',
       url: $form.attr('action'),
-      data: $form.serialize(),
+      data: $form.serializeArray(),
       success: function (response) {
         console.log(response);
       }
     });
   }
+
+  function clearFields($form) {
+    var $fields = $form.find('.form-field');
+
+    $.each($fields, function (i, item) {
+      $(item).val('');
+    });
+  }
+
 
 }());
