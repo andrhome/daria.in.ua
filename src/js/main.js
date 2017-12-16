@@ -7,7 +7,6 @@ $(document).ready(function () {
     //= partials/fixed-header.js
     //= partials/site-guide.js
     //= partials/go-to-top.js
-    //= partials/project-bg-animation.js
     //= partials/form-validation.js
 
 });

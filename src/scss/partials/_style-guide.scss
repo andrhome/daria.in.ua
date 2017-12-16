@@ -13,7 +13,7 @@
     margin-bottom: 60px;
   }
   .colors-blocks {
-    @include flex-box(row, center, center);
+    @include flex-box(row, center, flex-start);
     padding: 60px 0 128px;
     &__item {
       text-align: center;
