@@ -47,6 +47,7 @@
     max-width: 416px;
     .form-group {
         display: block;
+        position: relative;
         &:not(:first-child) {
             margin-top: 70px;
         }
@@ -59,6 +60,11 @@
         font-size: $font-size-big + 6;
         color: $color-3--2;
         margin-bottom: 10px;
+        i {
+            font-size: $font-size-big + 2;
+            vertical-align: text-top;
+            color: $color-1--1;
+        }
     }
     .form-field {
         height: 48px;
@@ -89,9 +95,6 @@
         &:focus {
             border-bottom: 2px solid $color-1--1;
         }
-        &.required-error {
-            border-bottom: 2px solid $color-1--3;
-        }
     }
     .link-line {
         width: 180px;
@@ -115,12 +118,14 @@
             }
         }
     }
+    .not-correct-email,
     .required-message {
         display: none;
         font-size: $font-size - 2;
         color: $color-1--3;
         padding: 10px 50px 0 0;
-        position: relative;
+        position: absolute;
+        bottom: -20px;
         .sign {
             width: 19px;
             height: 18px;
@@ -140,6 +145,22 @@
                 top: 6px;
                 left: -.5px;
             }
+        }
+    }
+    .required-error {
+        .form-field {
+            border-bottom: 2px solid $color-1--3;
+        }
+        .required-message {
+            display: block;
+        }
+    }
+    .email-error {
+        .required-message {
+            display: none;
+        }
+        .not-correct-email {
+            display: block;
         }
     }
 }

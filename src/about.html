@@ -95,18 +95,22 @@
                     </div>
                 </div>
                 <div class="feedback-form">
-                    <form action="#">
+                    <form action="#" id="feedbackForm">
                         <label class="form-group">
-                            <span class="label-text">Name</span>
-                            <input type="text" class="form-field" placeholder="Name" required>
+                            <span class="label-text">Name <i>*</i></span>
+                            <input type="text" class="form-field" placeholder="Name">
+                            <span class="required-message">This field is required! <i class="sign"></i></span>
                         </label>
                         <label class="form-group">
-                            <span class="label-text">E-mail</span>
-                            <input type="email" class="form-field" placeholder="E-mail" required>
+                            <span class="label-text">E-mail <i>*</i></span>
+                            <input type="text" class="form-field form-field-email" placeholder="E-mail">
+                            <span class="required-message">This field is required! <i class="sign"></i></span>
+                            <span class="not-correct-email">E-mail is not correct! <i class="sign"></i></span>
                         </label>
                         <label class="form-group form-group">
-                            <span class="label-text">Message</span>
-                            <textarea class="form-field form-field--textarea" placeholder="Message" required></textarea>
+                            <span class="label-text">Message <i>*</i></span>
+                            <textarea class="form-field form-field--textarea" placeholder="Message"></textarea>
+                            <span class="required-message">This field is required! <i class="sign"></i></span>
                         </label>
                         <button type="submit" class="link-line link-line--right">
                         <span class="link-line__overflow">
