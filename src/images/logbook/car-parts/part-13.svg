@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3656.779 -1692.574 105.108 78.292">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1f1f1;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #9b9b9b;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #95989a;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="комплектность" transform="translate(3656.779 -1692.574)">
+    <g id="Rectangle_128" data-name="Rectangle 128" class="cls-1" transform="translate(0 78.292) rotate(-90)">
+      <rect class="cls-4" width="78.292" height="95.764" rx="3"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="77.292" height="94.764" rx="2.5"/>
+    </g>
+    <line id="Line_112" data-name="Line 112" class="cls-2" x2="36.417" transform="translate(29.673 17.548)"/>
+    <g id="Group_388" data-name="Group 388" transform="translate(16.185 33.746)">
+      <line id="Line_113" data-name="Line 113" class="cls-2" x2="25.627" transform="translate(0 0)"/>
+      <line id="Line_114" data-name="Line 114" class="cls-2" x2="25.627" transform="translate(0 6.749)"/>
+      <line id="Line_115" data-name="Line 115" class="cls-2" x2="25.627" transform="translate(0 13.499)"/>
+      <line id="Line_116" data-name="Line 116" class="cls-2" x2="25.627" transform="translate(0 20.248)"/>
+    </g>
+    <g id="Group_389" data-name="Group 389" transform="translate(53.952 33.746)">
+      <line id="Line_113-2" data-name="Line 113" class="cls-2" x2="25.627" transform="translate(0 0)"/>
+      <line id="Line_114-2" data-name="Line 114" class="cls-2" x2="25.627" transform="translate(0 6.749)"/>
+      <line id="Line_115-2" data-name="Line 115" class="cls-2" x2="25.627" transform="translate(0 13.499)"/>
+      <line id="Line_116-2" data-name="Line 116" class="cls-2" x2="25.627" transform="translate(0 20.248)"/>
+    </g>
+    <path id="Path_337" data-name="Path 337" class="cls-3" d="M0,0,6.747,0l.011,26.985s-2.426,6.475-3.371,6.475S.011,26.985.011,26.985Z" transform="translate(99.97 6.72) rotate(49)"/>
+  </g>
+</svg>
