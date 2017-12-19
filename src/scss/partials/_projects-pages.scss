@@ -25,9 +25,6 @@
   .scroll-line {
     margin-top: -60px;
   }
-  h2 {
-    color: $color-3--1;
-  }
   .title-row {
     font-family: $font-light;
     font-size: $font-size-big;
@@ -37,6 +34,13 @@
     h2 {
       margin-bottom: 60px;
     }
+  }
+}
+.project-description {
+  &-title {
+    font-family: $font-light;
+    font-size: $font-size-st;
+    color: $color-3--1;
   }
 }
 
@@ -137,7 +141,7 @@
     margin: 0 auto 63px;
   }
   .project__img-holder {
-    max-width: 635px;
+    max-width: 636px;
     padding-left: 0;
   }
   .intro-box {
@@ -194,7 +198,7 @@
   .logo-icons {
     position: relative;
     padding-top: 16.5%;
-    margin-bottom: 94px;
+    margin-bottom: 219px;
     &::before {
       content: '';
       width: 21%;
@@ -207,6 +211,7 @@
     }
     .title-row {
       @include flex-box(row, space-between, flex-start);
+      margin-bottom: 0;
     }
     .text-block {
       width: 40%;
@@ -219,10 +224,27 @@
     }
   }
   .car-block {
+    background: $color-white;
     box-shadow: 0 0 18px 3px darken($color-3--4, 15%);
+    margin-bottom: 158px;
+    position: relative;
     &__container {
       max-width: 1350px;
       margin: 0 auto;
+    }
+  }
+  .car-img {
+    width: 35%;
+    max-width: 636px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -30%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      width: 100%;
     }
   }
   .car-icons {
@@ -230,15 +252,107 @@
     @include flex-box(row, center, center);
     flex-wrap: wrap;
     padding: 20px;
+    position: relative;
+    z-index: 1;
     &__item {
       width: 147px;
       height: 147px;
-      display: inline-block;
+      @include flex-box(row, center, center);
       vertical-align: top;
       border: 1px solid $color-3--2;
       box-shadow: 0 0 3px 0 $color-3--2;
       padding: 20px 10px;
       margin: 20px;
+    }
+  }
+  .style-guide {
+    margin-bottom: 10%;
+    .title-row {
+      margin-bottom: 9%;
+    }
+    .colors-blocks {
+      padding: 0;
+      margin-bottom: 18%;
+      &__item {
+        margin: 0 5.5%;
+      }
+      &__item-1 {
+        .colors-blocks__circle {
+          border-color: $color-2--1;
+          background: $color-2--1;
+        }
+      }
+      &__item-2 {
+        .colors-blocks__circle {
+          border-color: $color-2--3;
+          background: $color-2--3;
+        }
+      }
+      &__item-3 {
+        .colors-blocks__circle {
+          background: $color-3--4;
+        }
+      }
+    }
+    .font-block {
+      @include clearfix;
+      margin-bottom: 15px;
+      .project-description-title {
+        text-align: center;
+        margin-bottom: 68px;
+      }
+      &__text-box--bold {
+        max-width: 630px;
+        &:last-child {
+          float: right;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .font-block-holder {
+    position: relative;
+    &::before {
+      content: '';
+      width: 30%;
+      padding: 24% 0;
+      background: url('../images/logbook/blot-3.png') 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -36%;
+      right: 0;
+    }
+  }
+  .navbar-style {
+    .project-description-title {
+      margin-bottom: 90px;
+    }
+    .img-holder {
+      display: block;
+      box-shadow: 0 0 18px 3px darken($color-3--4, 15%);
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .landscape {
+    position: relative;
+    &::before {
+      content: '';
+      width: 25.7%;
+      padding: 22% 0;
+      background: url('../images/logbook/blot-4.png') 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: -22%;
+      left: 0;
+    }
+    &__img {
+      display: block;
+      margin-bottom: 13%;
+      img {
+        width: 100%;
+      }
     }
   }
 }
