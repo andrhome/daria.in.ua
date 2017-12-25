@@ -1,0 +1,205 @@
+/**
+ * Styles for Street Quests project page
+ */
+.street-quests-project-page {
+  .home-section {
+    margin-bottom: 297px;
+  }
+  .container {
+    box-sizing: border-box;
+  }
+  .project-street-quests {
+    padding: 220px 0 0;
+    margin-bottom: 83px;
+  }
+  .project__canvas {
+    min-height: 536px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .project__img-holder {
+    width: 330px;
+    bottom: -37%;
+    left: -12.7%;
+  }
+  .intro-box-holder {
+    @include clearfix;
+  }
+  .intro-box {
+    max-width: 320px;
+    float: right;
+    margin-right: 22.5%;
+  }
+  .text-block {
+    max-width: 560px;
+    p:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .top-text-block {
+    .project-description-title {
+      padding: 15px 0;
+      position: relative;
+      &::before, &::after {
+        content: '';
+        width: 306px;
+        border: 1px solid $color-1--2;
+        position: absolute;
+        z-index: -1;
+      }
+      &::before {
+        height: 533px;
+        bottom: 0;
+        left: 1px;
+      }
+      &::after {
+        height: 576px;
+        top: 0;
+        right: 110px;
+      }
+    }
+  }
+  .title-row {
+    margin-bottom: 140px;
+  }
+  .wireframes-row {
+    @include flex-box(row, space-between, flex-start);
+    margin-bottom: 175px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 88.3%;
+      height: 130px;
+      border: 1px solid $color-1--2;
+      position: absolute;
+      top: -10px;
+      right: 0;
+      z-index: -1;
+    }
+    .project-description-title {
+      padding-top: 25px;
+    }
+  }
+  .wireframes-img {
+    max-width: 640px;
+    img {
+      width: 100%;
+    }
+  }
+  .project-description-single-title {
+    text-align: center;
+    padding-right: 105px;
+    margin-bottom: 145px;
+    .figure-holder {
+      display: inline-block;
+      padding: 10px 0 10px 55px;
+      position: relative;
+      &::before, &::after {
+        content: '';
+        border: 1px solid $color-1--2;
+        position: absolute;
+        z-index: -1;
+      }
+      &::before {
+        width: 319px;
+        height: 632px;
+        bottom: 0;
+        right: 0;
+      }
+      &::after {
+        width: 478px;
+        height: 990px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .style-guide {
+    @include clearfix;
+    margin-bottom: 45px;
+    .font-block {
+      margin-bottom: 200px;
+      &__title {
+        text-align: left;
+        margin-bottom: 69px;
+      }
+      &__text-box {
+        width: 48%;
+        &--bold {
+          width: 52%;
+          max-width: 650px;
+          margin-top: 69px;
+        }
+      }
+    }
+    .colors-blocks {
+      &__item {
+        margin: 0 60px;
+      }
+      &__item-2 {
+        .colors-blocks__square {
+          background: $color-3--6;
+        }
+      }
+      &__item-3 {
+        .colors-blocks__square {
+          background: $color-1--2;
+        }
+      }
+      &__square {
+        width: 199px;
+        height: 199px;
+      }
+    }
+  }
+  .colors-blocks-wrap {
+    .project-description-title {
+      text-align: center;
+      padding-right: 25%;
+      margin-bottom: 148px;
+    }
+    .figure-holder {
+      padding: 5px 15px 0 90px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 748px;
+        height: 800px;
+        border: 1px solid $color-1--2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+  .layouts-block {
+    .project-description-title {
+      margin-bottom: 90px;
+    }
+  }
+  .layouts-img-holder {
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 78.5%;
+      background: lighten($color-3--3, 21%);
+      position: absolute;
+      top: 52%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: -1;
+    }
+  }
+  .layouts-img {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  .project-footer {
+    padding: 127px 0;
+    margin-top: -122px;
+  }
+}

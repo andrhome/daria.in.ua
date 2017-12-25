@@ -1,0 +1,59 @@
+/**
+ * Styles for Zernobot project page
+ */
+.zernobot-project-page {
+  .project-zernobot {
+    margin: 0;
+    .project__content {
+      padding-bottom: 9%;
+      margin-bottom: 43px;
+    }
+    .project__bg {
+      height: 110%;
+      //background-size: contain;
+      //background-attachment: fixed;
+      //background-position: 121% -32px;
+    }
+    .project__canvas {
+      height: 520px;
+      min-height: inherit;
+      padding-top: 175px;
+    }
+  }
+  .intro-box {
+    max-width: 320px;
+    float: right;
+    margin-right: 21%;
+  }
+  .project-main-image {
+    box-shadow: 0 0 22px 0 lighten($color-3--2, 10%);
+    position: relative;
+    z-index: 1;
+  }
+  .gradient-block {
+    width: 50%;
+    height: 27%;
+    max-height: 850px;
+    position: absolute;
+    background: rgb(28,97,138);
+    background: -moz-linear-gradient(top, rgb(28,97,138) 0%, rgb(46,98,111) 25%, rgb(61,110,115) 50%, rgb(71,121,122) 75%, rgb(79,128,124) 100%);
+    background: -webkit-linear-gradient(top, rgb(28,97,138) 0%,rgb(46,98,111) 25%,rgb(61,110,115) 50%,rgb(71,121,122) 75%,rgb(79,128,124) 100%);
+    background: linear-gradient(to bottom, rgb(28,97,138) 0%,rgb(46,98,111) 25%,rgb(61,110,115) 50%,rgb(71,121,122) 75%,rgb(79,128,124) 100%);
+    &--left {
+      top: 14%;
+      left: 0;
+    }
+    &--right {
+      bottom: 20%;
+      right: 0;
+    }
+  }
+  .image-block {
+    width: 55%;
+    display: block;
+    margin-top: -11%;
+    img {
+      width: 100%;
+    }
+  }
+}

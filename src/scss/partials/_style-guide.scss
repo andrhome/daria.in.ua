@@ -19,14 +19,17 @@
       text-align: center;
       margin: 0 40px;
     }
-    &__circle {
+    &__circle,
+    &__square{
       width: 180px;
       height: 180px;
       display: inline-block;
-      border-radius: 50%;
       border: 1px solid $color-3--2;
       background: $color-white;
       margin-bottom: 43px;
+    }
+    &__circle {
+      border-radius: 50%;
     }
     &__text {
       font-size: $font-size-lg - 4;
