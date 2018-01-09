@@ -55,6 +55,7 @@
       padding-top: 20px;
       img {
         width: 100%;
+        margin-left: 1px;
       }
     }
     .text-block {
@@ -70,9 +71,12 @@
       max-width: 1230px;
       @include flex-box(row, center, center);
       box-shadow: 0 0 18px 3px darken($color-3--4, 15%);
-      padding: 160px 76px;
+      overflow: hidden;
+      padding: 0 76px;
       & > * {
         flex: 1 1 50%;
+        padding-top: 160px;
+        padding-bottom: 160px;
       }
     }
     &__title {
@@ -81,11 +85,17 @@
       color: $color-3--2;
     }
     .left-col {
+      picture {
+        position: relative;
+        display: block;
+        z-index: 1;
+      }
       .fit-for__title {
         margin-bottom: 84px;
       }
     }
     .right-col {
+      box-shadow: -21px 0 18px -15px darken($color-3--4, 10%);
       .fit-for__title {
         text-align: right;
         margin-top: 84px;
@@ -170,9 +180,6 @@
     .colors-blocks {
       padding: 0;
       margin-bottom: 18%;
-      &__item {
-        margin: 0 5.5%;
-      }
       &__item-1 {
         .colors-blocks__circle {
           border-color: $color-2--1;
@@ -196,6 +203,7 @@
       margin-bottom: 15px;
       .project-description-title {
         text-align: center;
+        padding-left: 12.5%;
         margin-bottom: 68px;
       }
       &__text-box--bold {

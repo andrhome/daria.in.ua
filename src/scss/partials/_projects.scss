@@ -31,18 +31,17 @@
   }
   &__content {
     position: relative;
-    margin-left: 25.6%;
+    margin-left: 24.7%;
   }
   &__canvas {
-    min-width: 490px;
-    min-height: 640px;
+    height: 640px;
     display: inline-block;
     padding: 99px 20px 50px 245px;
     position: relative;
     z-index: 1;
     &::after {
       content: '';
-      width: 100%;
+      width: 490px;
       height: 100%;
       background-color: $color-3--4;
       box-shadow: 0 0 13px 1px $color-3--4;
@@ -82,7 +81,7 @@
     transition: all 1s ease-in-out;
   }
   &__img-holder {
-    width: 339px;
+    width: 332px;
     position: absolute;
     bottom: -29%;
     left: -11.5%;
@@ -95,15 +94,15 @@
     opacity: 0;
     margin-left: -10px;
     &:hover {
-      color: $color-3--2;
+      color: $color-white;
       .link-line__overflow {
         &::after,
         &::before {
-          background: $color-3--2;
+          background: $color-white;
         }
       }
       .link-line__text {
-        color: $color-3--2;
+        color: $color-white;
       }
     }
     &::before,
@@ -130,8 +129,33 @@
 /** Zernobot project **/
 .project-zernobot {
   padding-bottom: 10%;
-  &__content {
-    margin-bottom: 35%;
+  &:hover, &.active {
+    .link-line {
+      opacity: 0;
+    }
+    .project__canvas {
+      &::after {
+        opacity: 1;
+      }
+    }
+    .project__bg {
+      opacity: 0;
+    }
+  }
+  .project__content {
+    &:hover, &.active {
+      .link-line {
+        opacity: 1;
+      }
+      .project__canvas {
+        &::after {
+          opacity: 0;
+        }
+      }
+      .project__bg {
+        opacity: 1;
+      }
+    }
   }
   .project__canvas {
     &::after {
@@ -161,13 +185,16 @@
   }
   .project__canvas {
     min-width: inherit;
-    width: 35%;
+    width: 612px;
     min-height: inherit;
-    height: 85%;
+    height: 490px;
     padding: 0;
     position: absolute;
     top: -18%;
-    right: 13%;
+    right: 16.7%;
+    &:after {
+      width: 100%;
+    }
   }
   .project__title {
     color: $color-2--1;
@@ -183,7 +210,7 @@
     max-width: 715px;
     width: auto;
     display: block;
-    padding-left: 4.2%;
+    padding-left: 2.2%;
     margin: 0 auto;
     position: relative;
     bottom: inherit;
@@ -191,6 +218,18 @@
   }
   .link-line {
     color: $font-color;
+    &:hover {
+      color: $font-color;
+      .link-line__overflow {
+        &::after,
+        &::before {
+          background: $font-color;
+        }
+      }
+      .link-line__text {
+        color: $font-color;
+      }
+    }
     &::before,
     &::after {
       background: $font-color;
@@ -207,6 +246,9 @@
     background: url('../images/projects/logbook-bg.png') 0 0 no-repeat;
     background-size: cover;
     background-attachment: fixed;
+  }
+  .project__wrap {
+    margin-right: 20.5%;
   }
   .logbook-kia {
     width: 20%;
@@ -238,4 +280,40 @@
     background-size: cover;
     background-attachment: fixed;
   }
+}
+
+@include respond-to(desktop) {
+  //.project {
+  //  margin-bottom: 130px;
+  //  .link-line {
+  //    opacity: 1;
+  //  }
+  //  &__canvas {
+  //    &::after {
+  //      opacity: 0;
+  //    }
+  //  }
+  //  &__bg {
+  //    height: 100%;
+  //    opacity: 1;
+  //  }
+  //  &__img-holder {
+  //    left: -18%;
+  //  }
+  //}
+  //.project-logbook {
+  //  padding: 120px 0 100px;
+  //  .project__img-holder {
+  //    padding-left: 9%;
+  //  }
+  //  .project__wrap {
+  //    margin-right: 10%;
+  //  }
+  //}
+  //.project-street-quests {
+  //  padding: 60px 0 260px;
+  //  .project__canvas {
+  //    padding-top: 60px;
+  //  }
+  //}
 }

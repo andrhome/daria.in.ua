@@ -4,7 +4,7 @@
 .style-guide {
   margin-bottom: 105px;
   &__top-row {
-    margin: -60px 0 0 19%;
+    margin: -60px 0 0 24.7%;
     .style-guide__title {
       text-align: center;
     }
@@ -16,8 +16,8 @@
     @include flex-box(row, center, flex-start);
     padding: 60px 0 128px;
     &__item {
+      min-width: 304px;
       text-align: center;
-      margin: 0 40px;
     }
     &__circle,
     &__square{
@@ -34,6 +34,7 @@
     &__text {
       font-size: $font-size-lg - 4;
       color: $font-color-3;
+      letter-spacing: -.4px;
     }
   }
   .font-block {
@@ -41,12 +42,13 @@
     &__title {
       text-align: center;
       color: $font-color-3;
+      padding-left: 24%;
     }
     &__subtitle {
       margin-bottom: 30px;
     }
     &__text-box {
-      width: 46%;
+      width: 48%;
       max-width: 590px;
       font-size: $font-size-lg - 4;
       margin-bottom: 15px;
@@ -59,12 +61,21 @@
         font-family: $font-bold;
         margin-top: 120px;
       }
+      &.pull-right {
+        margin-right: 1.9%;
+      }
     }
     p {
+      letter-spacing: -1.6px;
       margin-bottom: 10px;
     }
   }
   &--zernobot {
+    .style-guide__top-row {
+      .style-guide__title {
+        padding-right: 18%;
+      }
+    }
     .colors-blocks__item-1 {
       .colors-blocks__circle {
         background: linear-gradient(to bottom, #072c2c, #0a8383);

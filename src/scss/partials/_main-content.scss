@@ -38,6 +38,9 @@
   overflow: hidden;
   padding: 10px 0;
   transition: all .2s cubic-bezier(.19, 1, .22, 1);
+  @include respond-to(desktop) {
+    width: 235px;
+  }
   &.link-line--right {
     text-align: left;
     padding-left: 10px;
@@ -136,11 +139,14 @@
       width: 192px;
       height: 2px;
       vertical-align: middle;
-      background: $color-3--2;
+      background: lighten($color-3--1, 6%);
       transition-delay: .5s;
       position: absolute;
       top: 5px;
       z-index: 1;
+      @include respond-to(desktop) {
+        width: 145px;
+      }
     }
     &::before {
       transform: translate3d(15px, 8px, 0);
@@ -159,7 +165,13 @@
  * Main title
  */
 .main-title-holder {
-  padding: 18.5% 15px 8% 8%;
+  padding: 18.5% 15px 8% 13.5%;
+  @include respond-to(desktop) {
+    padding: 24% 15px 8% 18%;
+  }
+  @include respond-to(tablet) {
+    padding: 22% 15px 8% 9%;
+  }
   .main-title {
     max-width: 842px;
     margin: 0 auto;

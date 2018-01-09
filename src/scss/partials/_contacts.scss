@@ -4,7 +4,7 @@
 .contacts {
     @include flex-box(row, space-between, center);
     background: lighten($color-3--4, 4%);
-    padding: 11% 0 120px;
+    padding: 285px 0 120px;
     .container {
         @include flex-box(row, space-between, flex-start);
     }
@@ -43,7 +43,7 @@
  * Feedback form
  */
 .feedback-form {
-    width: 100%;
+    width: 40%;
     max-width: 416px;
     .form-group {
         display: block;
@@ -68,6 +68,7 @@
     }
     .form-field {
         height: 48px;
+        font-family: $font-regular;
         font-size: $font-size-big - 4;
         line-height: $font-size-big;
         color: $color-1--1;
@@ -162,5 +163,24 @@
         .not-correct-email {
             display: block;
         }
+    }
+}
+
+@include respond-to(desktop) {
+    .contacts {
+        .container {
+            flex-direction: column;
+        }
+        &__info {
+            width: 100%;
+            margin-bottom: 80px;
+        }
+        &__title {
+            margin-bottom: 20%;
+        }
+    }
+    .feedback-form {
+        max-width: inherit;
+        width: 416px;
     }
 }

@@ -3,13 +3,14 @@
  */
 .header {
   @include flex-box(row, space-between, center);
-  padding-top: 32px;
+  padding-top: 42px;
   position: relative;
+  transition: none;
   &.fixed {
     width: 100%;
     background: $color-white;
     border-bottom: 1px solid $color-3--1;
-    padding: 15px 0 10px;
+    padding: 34px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,17 +21,22 @@
       display: block;
     }
     .logo {
-      width: 270px;
       display: block;
       margin: 0 auto;
+      @include respond-to(desktop) {
+        width: 235px;
+      }
     }
   }
   .logo {
-    width: 300px;
+    width: 250px;
     padding-left: 1px;
-    margin-left: 68px;
+    margin-left: 42px;
     animation: linear fade-in 1.5s;
     transition-delay: 2s;
+    @include respond-to(desktop) {
+      width: 250px;
+    }
   }
   .home-link {
     display: none;
@@ -39,5 +45,9 @@
     width: 284px;
     animation: linear fade-in 2.5s;
     transition-delay: 2s;
+    margin-top: 10px;
+    @include respond-to(desktop) {
+      width: 239px;
+    }
   }
 }

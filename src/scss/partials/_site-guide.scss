@@ -6,8 +6,11 @@
   text-align: center;
   position: fixed;
   top: 50%;
-  right: 65px;
+  right: 40px;
   transform: translateY(-50%);
+  @include respond-to(tablet) {
+    display: none;
+  }
   &, & > * {
     transition: all .2s ease-in-out;
   }
@@ -15,6 +18,9 @@
     font-family: $font-regular;
     font-size: $font-size-st;
     color: $color-1--1;
+    @include respond-to(desktop) {
+      font-size: $font-size-lg + 4;
+    }
     &:first-child {
       margin-bottom: 20px;
     }
@@ -33,6 +39,11 @@
     padding: 55px 0;
     margin-left: -4px;
     position: relative;
+    @include respond-to(desktop) {
+      font-size: $font-size-big - 6;
+      line-height: $font-size-big + 4;
+      padding: 35px 0;
+    }
     &::after {
       content: '';
       width: 1px;
