@@ -23,6 +23,9 @@
   @else if $media == tablet {
     @media only screen and (max-width: $tablet) { @content; }
   }
+  @else if $media == tablet2 {
+    @media only screen and (max-width: $tablet2) { @content; }
+  }
   @else if $media == desktop {
     @media only screen and (max-width: $desktop) { @content; }
   }

@@ -53,6 +53,15 @@
       transition: all 1s ease-in-out;
     }
   }
+  .mobile-project-link {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   &__title-holder {
     @include flex-box(row, space-between, center);
     margin-bottom: 35px;
@@ -283,37 +292,86 @@
 }
 
 @include respond-to(desktop) {
-  //.project {
-  //  margin-bottom: 130px;
-  //  .link-line {
-  //    opacity: 1;
-  //  }
-  //  &__canvas {
-  //    &::after {
-  //      opacity: 0;
-  //    }
-  //  }
-  //  &__bg {
-  //    height: 100%;
-  //    opacity: 1;
-  //  }
-  //  &__img-holder {
-  //    left: -18%;
-  //  }
-  //}
-  //.project-logbook {
-  //  padding: 120px 0 100px;
-  //  .project__img-holder {
-  //    padding-left: 9%;
-  //  }
-  //  .project__wrap {
-  //    margin-right: 10%;
-  //  }
-  //}
-  //.project-street-quests {
-  //  padding: 60px 0 260px;
-  //  .project__canvas {
-  //    padding-top: 60px;
-  //  }
-  //}
+  .project {
+    margin-bottom: 130px;
+    &__bg {
+      height: 100%;
+    }
+    &__img-holder {
+      left: -18%;
+    }
+    .mobile-project-link {
+      display: block;
+    }
+  }
 }
+
+@include respond-to(tablet) {
+  .project {
+    .link-line {
+      display: none;
+    }
+    &__content {
+      margin-left: 28.4%;
+    }
+    &.active,
+    &:hover {
+      .project__canvas {
+        &::after{
+          opacity: 1;
+        }
+      }
+      .project__bg {
+        opacity: 0;
+      }
+    }
+  }
+  .project-zernobot {
+    .project__content {
+      &.active , &:hover {
+        .project__bg {
+          opacity: 0;
+        }
+        .project__canvas {
+          &::after {
+            background-color: $color-2--2;
+            box-shadow: 0 0 13px 1px darken($color-2--2, 15%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .project-logbook {
+    .project__wrap {
+      margin-right: 17.5%;
+    }
+  }
+}
+
+@include respond-to(tablet2) {
+  .project {
+    &__content {
+      margin-left: 18%;
+    }
+  }
+  .project-logbook {
+    .project__wrap {
+      margin-right: 4%;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .project {
+    &__content {
+      margin-left: 18%;
+    }
+  }
+  .project-logbook {
+    .project__wrap {
+      margin-right: 4%;
+    }
+  }
+}
+

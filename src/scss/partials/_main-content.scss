@@ -167,10 +167,10 @@
 .main-title-holder {
   padding: 18.5% 15px 8% 13.5%;
   @include respond-to(desktop) {
-    padding: 24% 15px 8% 18%;
+    padding: 24% 15px 8% 17%;
   }
   @include respond-to(tablet) {
-    padding: 22% 15px 8% 9%;
+    max-width: 580px;
   }
   .main-title {
     max-width: 842px;
