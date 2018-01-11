@@ -5,6 +5,9 @@
     @include flex-box(row, space-between, center);
     background: lighten($color-3--4, 4%);
     padding: 285px 0 120px;
+    &.contacts-about {
+        padding-top: 11%;
+    }
     .container {
         @include flex-box(row, space-between, flex-start);
     }

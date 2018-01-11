@@ -20,7 +20,7 @@
   .project__img-holder {
     width: 330px;
     bottom: -37%;
-    left: -12.7%;
+    left: -11.5%;
   }
   .intro-box-holder {
     @include clearfix;
@@ -28,7 +28,7 @@
   .intro-box {
     max-width: 320px;
     float: right;
-    margin-right: 22.5%;
+    margin-right: 21.2%;
   }
   .text-block {
     max-width: 560px;
@@ -55,7 +55,7 @@
       &::after {
         height: 576px;
         top: 0;
-        right: 110px;
+        right: 100px;
       }
     }
   }
@@ -68,7 +68,7 @@
     position: relative;
     &::before {
       content: '';
-      width: 88.3%;
+      width: 87.5%;
       height: 130px;
       border: 1px solid $color-1--2;
       position: absolute;
@@ -76,20 +76,23 @@
       right: 0;
       z-index: -1;
     }
+    .text-block {
+      margin-right: -5px;
+    }
     .project-description-title {
       padding-top: 25px;
     }
   }
   .wireframes-img {
-    max-width: 640px;
+    max-width: 616px;
     img {
       width: 100%;
     }
   }
   .project-description-single-title {
     text-align: center;
-    padding-right: 105px;
-    margin-bottom: 145px;
+    padding-right: 12.6%;
+    margin-bottom: 12%;
     .figure-holder {
       display: inline-block;
       padding: 10px 0 10px 55px;
@@ -101,13 +104,13 @@
         z-index: -1;
       }
       &::before {
-        width: 319px;
+        width: 306px;
         height: 632px;
         bottom: 0;
         right: 0;
       }
       &::after {
-        width: 478px;
+        width: 461px;
         height: 990px;
         top: 0;
         left: 0;
@@ -121,6 +124,7 @@
       margin-bottom: 200px;
       &__title {
         text-align: left;
+        padding-left: 25%;
         margin-bottom: 69px;
       }
       &__text-box {
@@ -134,7 +138,7 @@
     }
     .colors-blocks {
       &__item {
-        margin: 0 60px;
+        margin: 0 2px;
       }
       &__item-2 {
         .colors-blocks__square {
@@ -155,15 +159,15 @@
   .colors-blocks-wrap {
     .project-description-title {
       text-align: center;
-      padding-right: 25%;
-      margin-bottom: 148px;
+      padding-right: 16.7%;
+      margin-bottom: 11%;
     }
     .figure-holder {
-      padding: 5px 15px 0 90px;
+      padding: 5px 15px 0 0;
       position: relative;
       &::before {
         content: '';
-        width: 748px;
+        width: 762px;
         height: 800px;
         border: 1px solid $color-1--2;
         position: absolute;
