@@ -57,6 +57,15 @@
       }
     }
   }
+  @include respond-to(mobile) {
+    div {
+      width: 24.5%;
+      &:first-child,
+      &:last-child {
+        width: 10px;
+      }
+    }
+  }
 }
 
 [data-aos=grid-loading] {

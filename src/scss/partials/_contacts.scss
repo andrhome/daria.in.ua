@@ -2,195 +2,264 @@
  * Contacts section
  */
 .contacts {
-    @include flex-box(row, space-between, center);
-    background: lighten($color-3--4, 4%);
-    padding: 285px 0 120px;
-    &.contacts-about {
-        padding-top: 11%;
+  @include flex-box(row, space-between, center);
+  background: lighten($color-3--4, 4%);
+  padding: 285px 0 120px;
+  &.contacts-about {
+    padding-top: 11%;
+  }
+  .container {
+    @include flex-box(row, space-between, flex-start);
+  }
+  a {
+    font-size: $font-size-big - 4;
+    display: inline-block;
+    color: $font-color;
+    margin-bottom: 22px;
+    &:hover {
+      color: $color-3--2;
     }
-    .container {
-        @include flex-box(row, space-between, flex-start);
+  }
+  &__info {
+    width: 50%;
+  }
+  &__title {
+    line-height: $font-size-st + 17px;
+    margin-bottom: 26.5%;
+  }
+  &__subtitle {
+    margin-bottom: 47px;
+  }
+  &__cols-wrap {
+    @include flex-box(row, space-between, flex-start);
+    flex-wrap: wrap;
+  }
+  &__col {
+    min-width: 167px;
+    &:first-child {
+      margin: 0 20px 30px 0;
     }
-    a {
-        font-size: $font-size-big - 4;
-        display: inline-block;
-        color: $font-color;
-        margin-bottom: 22px;
-        &:hover {
-            color: $color-3--2;
-        }
-    }
-    &__info {
-        width: 50%;
-    }
-    &__title {
-        line-height: $font-size-st + 17px;
-        margin-bottom: 26.5%;
-    }
-    &__subtitle {
-        margin-bottom: 47px;
-    }
-    &__cols-wrap {
-        @include flex-box(row, space-between, flex-start);
-        flex-wrap: wrap;
-    }
-    &__col {
-        min-width: 167px;
-        &:first-child {
-            margin: 0 20px 30px 0;
-        }
-    }
+  }
 }
 
 /**
  * Feedback form
  */
 .feedback-form {
-    width: 40%;
-    max-width: 416px;
-    .form-group {
-        display: block;
-        position: relative;
-        &:not(:first-child) {
-            margin-top: 70px;
-        }
-        & > * {
-            width: 100%;
-            display: block;
-        }
+  width: 40%;
+  max-width: 416px;
+  .form-group {
+    display: block;
+    position: relative;
+    &:not(:first-child) {
+      margin-top: 70px;
     }
-    .label-text {
-        font-size: $font-size-big + 6;
-        color: $color-3--2;
-        margin-bottom: 10px;
-        i {
-            font-size: $font-size-big + 2;
-            vertical-align: text-top;
-            color: $color-1--1;
-        }
+    & > * {
+      width: 100%;
+      display: block;
     }
-    .form-field {
-        height: 48px;
-        font-family: $font-regular;
-        font-size: $font-size-big - 4;
-        line-height: $font-size-big;
-        color: $color-1--1;
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid $color-3--2;
-        outline: none;
-        padding: 10px 0;
-        &::-webkit-input-placeholder {
-            font-family: $font-regular;
-            color: $color-3--1;
-        }
-        &::-moz-placeholder {
-            font-family: $font-regular;
-            color: $color-3--1;
-        }
-        &:-ms-input-placeholder {
-            font-family: $font-regular;
-            color: $color-3--1;
-        }
-        &--textarea {
-            height: 180px;
-            resize: none;
-        }
-        &:focus {
-            border-bottom: 2px solid $color-1--1;
-        }
+  }
+  .label-text {
+    font-size: $font-size-big + 6;
+    color: $color-3--2;
+    margin-bottom: 10px;
+    i {
+      font-size: $font-size-big + 2;
+      vertical-align: text-top;
+      color: $color-1--1;
     }
-    .link-line {
-        width: 180px;
-        text-align: left;
-        color: $font-color;
-        cursor: pointer;
-        border: 0;
-        background: transparent;
-        margin-top: 35px;
-        margin-left: -10px;
-        &:hover {
-            .link-line__overflow {
-                &::before, &::after{
-                    background: $color-1--1;
-                }
-            }
-        }
-        .link-line__overflow {
-            &::before, &::after{
-                background: $font-color;
-            }
-        }
+  }
+  .form-field {
+    height: 48px;
+    font-family: $font-regular;
+    font-size: $font-size-big - 4;
+    line-height: $font-size-big;
+    color: $color-1--1;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $color-3--2;
+    outline: none;
+    padding: 10px 0;
+    &::-webkit-input-placeholder {
+      font-family: $font-regular;
+      color: $color-3--1;
     }
-    .not-correct-email,
-    .required-message {
-        display: none;
-        font-size: $font-size - 2;
-        color: $color-1--3;
-        padding: 10px 50px 0 0;
+    &::-moz-placeholder {
+      font-family: $font-regular;
+      color: $color-3--1;
+    }
+    &:-ms-input-placeholder {
+      font-family: $font-regular;
+      color: $color-3--1;
+    }
+    &--textarea {
+      height: 180px;
+      resize: none;
+    }
+    &:focus {
+      border-bottom: 2px solid $color-1--1;
+    }
+  }
+  .link-line {
+    width: 180px;
+    text-align: left;
+    color: $font-color;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    margin-top: 35px;
+    margin-left: -10px;
+    &:hover {
+      .link-line__overflow {
+        &::before, &::after {
+          background: $color-1--1;
+        }
+      }
+    }
+    .link-line__overflow {
+      &::before, &::after {
+        background: $font-color;
+      }
+    }
+  }
+  .not-correct-email,
+  .required-message {
+    display: none;
+    font-size: $font-size - 2;
+    color: $color-1--3;
+    padding: 10px 50px 0 0;
+    position: absolute;
+    bottom: -20px;
+    .sign {
+      width: 19px;
+      height: 18px;
+      border-style: solid;
+      border-width: 0 9px 18px 9px;
+      border-color: transparent transparent $color-1--3 transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      &::before {
+        content: '!';
+        font-family: $font-bold;
+        font-size: $font-size - 3;
+        line-height: $font-size - 3;
+        color: $color-white;
         position: absolute;
-        bottom: -20px;
-        .sign {
-            width: 19px;
-            height: 18px;
-            border-style: solid;
-            border-width: 0 9px 18px 9px;
-            border-color: transparent transparent $color-1--3 transparent;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            &::before {
-                content: '!';
-                font-family: $font-bold;
-                font-size: $font-size - 3;
-                line-height: $font-size - 3;
-                color: $color-white;
-                position: absolute;
-                top: 6px;
-                left: -.5px;
-            }
-        }
+        top: 6px;
+        left: -.5px;
+      }
     }
-    .required-error {
-        .form-field {
-            border-bottom: 2px solid $color-1--3;
-        }
-        .required-message {
-            display: block;
-        }
+  }
+  .required-error {
+    .form-field {
+      border-bottom: 2px solid $color-1--3;
     }
-    .email-error {
-        .required-message {
-            display: none;
-        }
-        .not-correct-email {
-            display: block;
-        }
+    .required-message {
+      display: block;
     }
+  }
+  .email-error {
+    .required-message {
+      display: none;
+    }
+    .not-correct-email {
+      display: block;
+    }
+  }
 }
 
 @include respond-to(desktop) {
-    .contacts {
-        .container {
-            flex-direction: column;
-        }
-        &__info {
-            width: 100%;
-            margin-bottom: 80px;
-        }
-        &__title {
-            margin-bottom: 20%;
-        }
+  .contacts {
+    .container {
+      flex-direction: column;
     }
-    .feedback-form {
-        max-width: inherit;
-        width: 416px;
+    &__info {
+      width: 100%;
+      margin-bottom: 80px;
     }
+    &__title {
+      margin-bottom: 20%;
+    }
+  }
+  .feedback-form {
+    max-width: inherit;
+    width: 416px;
+  }
 }
 
 @include respond-to(tablet) {
-    .contacts {
-        padding: 120px 0;
+  .contacts {
+    padding: 120px 0;
+  }
+}
+
+@include respond-to(mobile) {
+  .contacts {
+    padding: 43px 0;
+    &__title {
+      font-size: $font-size-big;
+      line-height: $font-size-lg;
+      margin-bottom: 42px;
     }
+    &__cols-wrap {
+      flex-direction: column;
+    }
+    &__col {
+      width: 100%;
+      ul {
+        li {
+          display: inline-block;
+          vertical-align: baseline;
+          &:not(:last-child) {
+            margin-right: 14px;
+          }
+        }
+      }
+    }
+    &__subtitle {
+      font-size: $font-size + 4;
+      margin-bottom: 20px;
+    }
+    a {
+      font-size: $font-size;
+      margin-bottom: 9px;
+    }
+  }
+  .feedback-form  {
+    width: 280px;
+    margin: 0 auto;
+    .label-text {
+      font-size: $font-size + 4;
+      i {
+        font-size: $font-size + 4;
+      }
+    }
+    .form-field {
+      height: 40px;
+      font-size: $font-size + 1;
+      padding: 8px 0;
+      &--textarea {
+        height: 126px;
+      }
+    }
+    .form-group {
+      &:not(:first-child) {
+        margin-top: 46px;
+      }
+    }
+    .link-line {
+      width: 97px;
+      font-size: $font-size + 4;
+      &__overflow {
+        &::after,
+        &::before {
+          width: 48px;
+          height: 2px;
+          top: 2px;
+        }
+      }
+    }
+  }
 }
 

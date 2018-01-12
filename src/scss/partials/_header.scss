@@ -6,6 +6,9 @@
   padding-top: 42px;
   position: relative;
   transition: none;
+  @include respond-to(mobile) {
+    padding-top: 32px;
+  }
   &.fixed {
     width: 100%;
     background: $color-white;
@@ -27,6 +30,15 @@
         width: 235px;
       }
     }
+    @include respond-to(mobile) {
+      padding: 25px 0 22px;
+      .logo {
+        display: none;
+      }
+      .logo-mobile {
+        display: block;
+      }
+    }
   }
   .logo {
     width: 250px;
@@ -37,6 +49,14 @@
     @include respond-to(desktop) {
       width: 250px;
     }
+    @include respond-to(mobile) {
+      width: 150px;
+      margin-left: 10px;
+    }
+  }
+  .logo-mobile {
+    display: none;
+    width: 50px;
   }
   .home-link {
     display: none;
@@ -48,6 +68,10 @@
     margin-top: 10px;
     @include respond-to(desktop) {
       width: 239px;
+    }
+    @include respond-to(mobile) {
+      width: 65px;
+      margin-top: 0;
     }
   }
 }

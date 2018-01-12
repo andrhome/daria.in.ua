@@ -32,6 +32,10 @@ h2 {
 	line-height: $font-size-st + 10;
 	color: $color-1--1;
 	margin-bottom: 15px;
+	@include respond-to(mobile) {
+		font-size: $font-size-lg - 4;
+		line-height: normal;
+	}
 }
 h4 {
 	font-size: $font-size-big + 6;
@@ -42,4 +46,8 @@ h5 {
 	font-size: $font-size-big;
 	color: $color-1--2;
 	margin-bottom: 10px;
+	@include respond-to(mobile) {
+		font-size: $font-size + 4;
+		line-height: normal;
+	}
 }
