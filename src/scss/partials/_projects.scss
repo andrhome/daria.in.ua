@@ -138,7 +138,7 @@
 /** Zernobot project **/
 .project-zernobot {
   padding-bottom: 10%;
-  &:hover, &.active {
+  &:hover {
     .link-line {
       opacity: 0;
     }
@@ -152,7 +152,22 @@
     }
   }
   .project__content {
-    &:hover, &.active {
+    &:hover {
+      .link-line {
+        opacity: 1;
+      }
+      .project__canvas {
+        &::after {
+          opacity: 0;
+        }
+      }
+      .project__bg {
+        opacity: 1;
+      }
+    }
+  }
+  &.active {
+    .project__content {
       .link-line {
         opacity: 1;
       }
