@@ -68,7 +68,7 @@
   .fit-for {
     background: $color-3--4;
     &__container {
-      max-width: 1230px;
+      max-width: 1224px;
       @include flex-box(row, center, center);
       box-shadow: 0 0 18px 3px darken($color-3--4, 15%);
       overflow: hidden;

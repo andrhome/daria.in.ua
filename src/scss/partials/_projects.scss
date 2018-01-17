@@ -294,6 +294,9 @@
 @include respond-to(desktop) {
   .project {
     margin-bottom: 130px;
+    &__content {
+      margin-left: 28.5%;
+    }
     &__bg {
       height: 100%;
     }

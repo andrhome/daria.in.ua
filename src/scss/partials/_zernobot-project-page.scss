@@ -10,9 +10,6 @@
     }
     .project__bg {
       height: 110%;
-      //background-size: contain;
-      //background-attachment: fixed;
-      //background-position: 121% -32px;
     }
     .project__canvas {
       height: 520px;
@@ -56,4 +53,86 @@
       width: 100%;
     }
   }
+}
+
+@include respond-to(desktop) {
+  .zernobot-project-page {
+    .intro-box {
+      margin-right: 14%;
+    }
+    .image-block {
+      margin-top: -23%;
+    }
+    .style-guide__top-row {
+      margin: 0;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .zernobot-project-page {
+    .intro-box {
+      margin-right: 10.5%;
+    }
+    .image-block {
+      margin-top: -23%;
+    }
+    .style-guide__top-row {
+      margin: 0;
+    }
+  }
+}
+
+@include respond-to(tablet2) {
+  .zernobot-project-page {
+    .intro-box {
+      margin-right: 22.8%;
+    }
+    .project-main-image {
+      margin: 0 13px;
+    }
+    .image-block {
+      margin-top: -23%;
+    }
+    .style-guide__top-row {
+      margin: 0;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .zernobot-project-page {
+    .home-section {
+      overflow: hidden;
+    }
+    .project-zernobot {
+      .project__content {
+        padding-bottom: 65px;
+        padding-left: 36px;
+        margin-bottom: 110px;
+        margin-left: 0;
+      }
+      .project__canvas {
+        height: 336px;
+        padding-top: 76px;
+        padding-left: 135px;
+      }
+      .project__bg {
+        height: 100%;
+        top: -30px;
+        bottom: inherit;
+        left: 36px;
+      }
+    }
+  }
+}
+
+@include respond-to(small) {
+  .zernobot-project-page {
+    .project__bg {
+      background: url('../images/zernobot/zernobot-bg-mobile.png') 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+
 }

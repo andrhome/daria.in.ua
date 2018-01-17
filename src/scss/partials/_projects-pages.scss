@@ -24,6 +24,9 @@
   }
   .scroll-line {
     margin-top: -60px;
+    @include respond-to(desktop) {
+      margin-top: 35px;
+    }
   }
   .title-row {
     margin-bottom: 132px;
@@ -38,10 +41,80 @@
     }
   }
 }
+
 .project-description {
   &-title {
     font-family: $font-light;
     font-size: $font-size-st;
     color: $color-3--1;
+  }
+}
+
+@include respond-to(desktop) {
+  .project-page {
+    .container--resize {
+      width: 71%;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .project-page {
+    .container--resize {
+      width: 68.7%;
+    }
+  }
+}
+
+@include respond-to(tablet2) {
+  .project-page {
+    .grids {
+      div {
+        width: 24.5%;
+        &:first-child,
+        &:last-child {
+          width: 10px;
+        }
+      }
+    }
+    .scroll-line {
+      margin-top: 95px;
+    }
+    .container--resize {
+      width: 100%;
+    }
+    .project__content {
+      margin-left: 15%;
+    }
+    .text-block {
+      font-size: $font-size + 4;
+    }
+  }
+  .project-description {
+    &-title {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .project-page {
+    .project {
+      .project__canvas {
+        &::after {
+          opacity: 0 !important;
+        }
+      }
+      .project__bg {
+        opacity: 1 !important;
+      }
+    }
+    .project__img-holder {
+      left: 5px;
+    }
+    .project__title {
+      font-size: $font-size-big + 4;
+      margin-bottom: 22px;
+    }
   }
 }

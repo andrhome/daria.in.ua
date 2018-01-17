@@ -2,54 +2,57 @@
  * Main Footer
  */
 .footer {
-    background: lighten($color-3--4, 4%);
-    &__content {
-        color: $font-color-2;
-        @include flex-box(row, space-between, center);
-        flex-wrap: wrap;
-        padding-top: 20px;
-    }
-    .copyright,
-    .made-by {
-        margin-bottom: 20px;
-    }
-    .copyright {
-        margin-right: 20px;
-    }
+  background: lighten($color-3--4, 4%);
+  &__content {
+    color: $font-color-2;
+    @include flex-box(row, space-between, center);
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .copyright,
+  .made-by {
+    margin-bottom: 20px;
+  }
+  .copyright {
+    margin-right: 20px;
+  }
 }
 
 /**
  * Footer on the project page
  */
 .project-footer {
-    @include flex-box(row, space-between, center);
-    border-top: 1px solid $color-3--1;
-    background: $color-white;
-    padding: 60px 0;
-    .link-line {
-        text-transform: uppercase;
-        .link-line__overflow {
-            &::before,
-            &::after {
-                background: $color-3--1;
-            }
-        }
-        &:hover {
-            .link-line__overflow {
-                &::before,
-                &::after {
-                    background: $color-1--1;
-                }
-            }
-            .link-line__text {
-                color: $color-1--1;
-            }
-        }
-        &--left {
-            width: 420px;
-        }
-        &--right {
-            width: 350px;
-        }
+  @include flex-box(row, space-between, center);
+  border-top: 1px solid $color-3--1;
+  background: $color-white;
+  padding: 60px 0;
+  .link-line {
+    text-transform: uppercase;
+    .link-line__overflow {
+      &::before,
+      &::after {
+        background: $color-3--1;
+      }
     }
+    &:hover {
+      .link-line__overflow {
+        &::before,
+        &::after {
+          background: $color-1--1;
+        }
+      }
+      .link-line__text {
+        color: $color-1--1;
+      }
+    }
+    &--left {
+      width: 420px;
+    }
+    &--right {
+      width: 350px;
+      @include respond-to(desktop) {
+        width: 320px;
+      }
+    }
+  }
 }
