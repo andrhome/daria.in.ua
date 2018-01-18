@@ -99,6 +99,9 @@
 
 @include respond-to(mobile) {
   .project-page {
+    .scroll-line {
+      margin-top: 60px;
+    }
     .project {
       .project__canvas {
         &::after {
@@ -116,5 +119,29 @@
       font-size: $font-size-big + 4;
       margin-bottom: 22px;
     }
+    .intro-box {
+      font-size: $font-size;
+      line-height: $font-size-big - 2;
+      &__date {
+        font-size: $font-size + 4;
+      }
+    }
+    .text-block {
+      font-size: $font-size + 2;
+      line-height: $font-size-big + 2;
+      h2 {
+        margin-bottom: 32px;
+      }
+    }
+    .title-row {
+      margin-bottom: 42px;
+    }
   }
+  .project-description-title {
+    font-size: $font-size-big + 2;
+  }
+}
+
+@include respond-to(small) {
+
 }

@@ -14,6 +14,9 @@
 }
 
 @mixin respond-to($media) {
+  @if $media == small-320 {
+    @media only screen and (max-width: $small-320) { @content; }
+  }
   @if $media == small {
     @media only screen and (max-width: $small) { @content; }
   }

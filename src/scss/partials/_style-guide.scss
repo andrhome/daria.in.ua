@@ -3,6 +3,9 @@
  */
 .style-guide {
   margin-bottom: 105px;
+  @include respond-to(small) {
+    margin-bottom: 43px;
+  }
   &__top-row {
     margin: -60px 0 0 24.7%;
     .style-guide__title {
@@ -14,18 +17,34 @@
     @include respond-to(tablet) {
       margin-bottom: 15px;
     }
+    @include respond-to(mobile) {
+      margin-bottom: 28px;
+    }
   }
   .colors-blocks {
     @include flex-box(row, center, flex-start);
     padding: 60px 0 128px;
+    @include respond-to(mobile) {
+      padding: 0;
+    }
     &__item {
       min-width: 304px;
       text-align: center;
       @include respond-to(tablet) {
         min-width: 252px;
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
       }
       @include respond-to(tablet2) {
-        min-width: 33.3%;
+        width: 33.3%;
+        min-width: inherit;
+      }
+      @include respond-to(mobile) {
+        width: 23.3%;
+      }
+      @include respond-to(small) {
+        width: 65px;
       }
     }
     &__circle,
@@ -43,6 +62,16 @@
       @include respond-to(tablet2) {
         margin-bottom: 28px;
       }
+      @include respond-to(mobile) {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+      }
+      @include respond-to(small) {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 12px;
+      }
     }
     &__circle {
       border-radius: 50%;
@@ -53,6 +82,9 @@
       letter-spacing: -.4px;
       @include respond-to(tablet2) {
         font-size: $font-size-big - 2;
+      }
+      @include respond-to(mobile) {
+        font-size: $font-size - 2;
       }
     }
   }
@@ -68,9 +100,21 @@
       @include respond-to(tablet) {
         padding-left: 43.3%;
       }
+      @include respond-to(mobile) {
+        font-size: $font-size-big - 2;
+        padding-left: 18.4%;
+        margin-bottom: 29px;
+      }
+      @include respond-to(small) {
+        text-align: left;
+        padding-left: 0;
+      }
     }
     &__subtitle {
       margin-bottom: 30px;
+      @include respond-to(mobile) {
+        margin-bottom: 12px;
+      }
     }
     &__text-box {
       width: 48%;
@@ -79,6 +123,14 @@
       margin-bottom: 15px;
       @include respond-to(tablet2) {
         font-size: $font-size-big;
+      }
+      @include respond-to(mobile) {
+        font-size: $font-size;
+      }
+      @include respond-to(small) {
+        width: 275px;
+        float: none;
+        margin: 0 0 22px;
       }
       &--light {
         font-family: $font-light;
@@ -91,6 +143,10 @@
         @include respond-to(desktop) {
           width: 48%;
         }
+        @include respond-to(mobile) {
+          width: 275px;
+          margin: 0 0 22px;
+        }
       }
       &.pull-right {
         margin-right: 1.9%;
@@ -99,6 +155,9 @@
     p {
       letter-spacing: -1.6px;
       margin-bottom: 10px;
+      @include respond-to(mobile) {
+        letter-spacing: 0;
+      }
     }
   }
   &--zernobot {
@@ -114,6 +173,12 @@
         }
         @include respond-to(tablet2) {
           padding-left: 12.3%;
+        }
+        @include respond-to(mobile) {
+          padding-left: 10.2%;
+        }
+        @include respond-to(small) {
+          padding-left: 26.5%;
         }
       }
     }

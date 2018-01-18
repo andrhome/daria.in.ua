@@ -446,11 +446,11 @@
   }
 }
 
-@include respond-to(small) {
+@include respond-to(small-320) {
   .project {
     &__img-holder {
-      bottom: -65px;
       width: 155px;
+      bottom: -34%;
     }
   }
 }
