@@ -47,6 +47,9 @@
     }
     &--left {
       width: 420px;
+      @include respond-to(desktop) {
+        width: 390px;
+      }
     }
     &--right {
       width: 350px;

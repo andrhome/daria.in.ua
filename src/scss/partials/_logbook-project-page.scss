@@ -31,6 +31,17 @@
       bottom: 100px;
       border-bottom: 1px solid $color-3--1;
     }
+    &.active {
+      .project__canvas {
+        &::after {
+          background: none;
+          box-shadow: none;
+        }
+      }
+      .project__bg {
+        opacity: 1;
+      }
+    }
   }
   .project__wrap {
     float: none;
@@ -143,10 +154,11 @@
   .car-img {
     width: 35%;
     max-width: 636px;
+    min-width: 300px;
     display: block;
     margin: 0 auto;
     position: absolute;
-    top: -30%;
+    top: -120px;
     right: 0;
     left: 0;
     z-index: -1;
@@ -251,6 +263,7 @@
       position: absolute;
       bottom: -22%;
       left: 0;
+      z-index: -1;
     }
     &__img {
       display: block;
@@ -258,6 +271,92 @@
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .logbook-project-page {
+    .car-img {
+      top: -80px;
+    }
+    .logo-icons {
+      margin-bottom: 120px;
+    }
+    .car-icons {
+      max-width: 945px;
+      margin: 0 auto;
+    }
+    .font-block-holder {
+      &::before {
+        top: 0;
+      }
+    }
+    .style-guide {
+      .colors-blocks__item {
+        min-width: inherit;
+        width: 25%;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .logbook-project-page {
+    .scroll-line {
+      margin-top: 0;
+    }
+    .fit-for {
+      &__container {
+        width: 66.7%;
+        padding: 0 50px;
+        & > * {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+      }
+    }
+    .car-img {
+      top: -60px;
+    }
+    .car-icons {
+      max-width: 640px;
+    }
+    .style-guide {
+      .font-block {
+        .project-description-title {
+          padding-left: 22.5%;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(tablet2) {
+  .logbook-project-page {
+    .project-logbook {
+      .logbook-kia {
+        display: none;
+      }
+      .project__content {
+        margin-left: 0;
+      }
+    }
+    .fit-for {
+      &__container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .logbook-project-page {
+    .project__wrap {
+      padding-left: 27%;
+    }
+    .project__img-holder {
+      max-width: 480px;
     }
   }
 }
