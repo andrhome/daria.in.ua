@@ -125,10 +125,8 @@
         font-size: $font-size-big;
       }
       @include respond-to(mobile) {
-        font-size: $font-size;
-      }
-      @include respond-to(small) {
         width: 275px;
+        font-size: $font-size;
         float: none;
         margin: 0 0 22px;
       }
