@@ -386,7 +386,7 @@
     .project__img-holder {
       max-width: 440px;
     }
-    .title-row {
+    .title-row--top {
       display: block;
       max-width: 480px;
       padding: 0;
@@ -417,6 +417,14 @@
       .right-col {
         .fit-for__title {
           margin-top: 47px;
+        }
+      }
+    }
+    .style-guide {
+      .font-block {
+        .project-description-title {
+          text-align: left;
+          padding-left: 0;
         }
       }
     }
@@ -483,9 +491,49 @@
       }
     }
     .logo-icons {
+      padding-top: 28px;
+      position: relative;
       &::before {
         width: 74.5%;
         padding: 30.9% 0;
+      }
+      .text-block {
+        margin-top: 55%;
+      }
+      .icon-block {
+        width: 136px;
+        margin: 0;
+        position: absolute;
+        top: 28px;
+        right: 10px;
+      }
+    }
+    .title-row {
+      display: block;
+      .text-block {
+        width: 100%;
+        p {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .car-block {
+      margin-bottom: 62px;
+    }
+    .car-icons {
+      padding: 20px 0;
+      &__item {
+        width: 140px;
+        height: 140px;
+        margin: 10px;
+      }
+    }
+    .landscape {
+      padding-bottom: 1px;
+      &::before {
+        width: 55%;
+        padding: 43% 0;
+        bottom: 20px;
       }
     }
   }
