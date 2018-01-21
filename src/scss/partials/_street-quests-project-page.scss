@@ -3,7 +3,7 @@
  */
 .street-quests-project-page {
   .home-section {
-    margin-bottom: 297px;
+    margin-bottom: 15%;
   }
   .container {
     box-sizing: border-box;
@@ -11,6 +11,17 @@
   .project-street-quests {
     padding: 220px 0 0;
     margin-bottom: 83px;
+    &.active {
+      .project__canvas {
+        &::after {
+          background: none;
+          box-shadow: none;
+        }
+      }
+      .project__bg {
+        opacity: 1;
+      }
+    }
   }
   .project__canvas {
     min-height: 536px;
@@ -85,6 +96,7 @@
   }
   .wireframes-img {
     max-width: 616px;
+    width: 50%;
     img {
       width: 100%;
     }
@@ -205,5 +217,394 @@
   .project-footer {
     padding: 127px 0;
     margin-top: -122px;
+  }
+}
+
+@include respond-to(desktop) {
+  .street-quests-project-page {
+    .project-street-quests {
+      padding: 12% 0 0;
+    }
+    .intro-box {
+      margin-right: 14.5%;
+    }
+    .project__img-holder {
+      left: -17.9%;
+    }
+    .top-text-block {
+      .project-description-title {
+        &::after {
+          right: 9.1%;
+        }
+      }
+    }
+    .wireframes-row {
+      .text-block {
+        margin-right: 0;
+      }
+    }
+    .project-description-single-title {
+      padding-right: 0;
+      padding-left: 8%;
+      .figure-holder {
+        padding-left: 42px;
+        &::before {
+          height: 552px;
+          right: -4px;
+        }
+        &::after {
+          width: 439px;
+          height: 1035px;
+        }
+      }
+    }
+    .colors-blocks-wrap {
+      .project-description-title {
+        padding-right: 0;
+        padding-left: 40.4%;
+      }
+      .figure-holder {
+        &::before {
+          width: 599px;
+          height: 600px;
+          right: 4px;
+        }
+      }
+    }
+    .style-guide {
+      .colors-blocks {
+        position: relative;
+        left: 6.8%;
+        &__square {
+          width: 180px;
+          height: 180px;
+        }
+        &__item {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .street-quests-project-page {
+    .intro-box {
+      margin-right: 11.3%;
+    }
+    .top-text-block {
+      .project-description-title {
+        &::after {
+          right: 14.6%;
+        }
+      }
+    }
+    .project-description-single-title {
+      .figure-holder {
+        &::before {
+          height: 510px;
+          right: 0;
+          left: -87.2%;
+        }
+        &::after {
+          height: 900px;
+          left: -36.9%;
+        }
+      }
+    }
+    .wireframes-row {
+      &::before {
+        width: 99.6%;
+      }
+    }
+    .style-guide {
+      .font-block__text-box {
+        width: 100%;
+      }
+    }
+    .colors-blocks-wrap {
+      .project-description-title {
+        padding-left: 33.4%;
+      }
+      .figure-holder {
+        &::before {
+          width: 511px;
+          height: 560px;
+          right: -10%;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(tablet2) {
+  .street-quests-project-page {
+    .intro-box {
+      margin-right: 23.2%;
+    }
+    .top-text-block {
+      .project-description-title {
+        &::after {
+          right: 24.9%;
+        }
+      }
+    }
+    .project-description-single-title {
+      .figure-holder {
+        &::before {
+          height: 566px;
+          left: 22%;
+        }
+        &::after {
+          width: 419px;
+          height: 865px;
+          left: inherit;
+          right: -98.6%;
+        }
+      }
+    }
+    .wireframes-row {
+      &::before {
+        width: 86.3%;
+      }
+    }
+    .style-guide {
+      .font-block__title {
+        padding-left: 0;
+      }
+      .colors-blocks-wrap {
+        float: none;
+        .project-description-title {
+          padding-left: 14.2%;
+        }
+        .figure-holder {
+          &::before {
+            width: 536px;
+            height: 640px;
+            right: 0;
+          }
+        }
+      }
+      .colors-blocks {
+        left: inherit;
+        &__square {
+          width: 140px;
+          height: 140px;
+        }
+        &__item {
+          &:not(:last-child) {
+            margin-right: 1px;
+          }
+        }
+      }
+    }
+    .project-footer {
+      padding: 120px 0 50px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .street-quests-project-page {
+    .project {
+      &__content {
+        margin-left: 0;
+      }
+      &__img-holder {
+        left: 4px;
+      }
+    }
+    .home-section {
+      margin-bottom: 35px;
+    }
+    .intro-box {
+      margin-right: 8.2%;
+    }
+    .scroll-line {
+      margin-top: 0;
+    }
+    .project__canvas {
+      min-height: inherit;
+      height: 340px;
+      padding-left: 34%;
+    }
+    .top-text-block {
+      .project-description-title {
+        padding: 5px 0;
+        &::after,
+        &::before {
+          width: 185px;
+          height: 294px;
+        }
+        &::after {
+          top: 15px;
+          right: inherit;
+          left: 18%;
+        }
+      }
+      p {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .wireframes-row {
+      flex-wrap: wrap-reverse;
+      margin-bottom: 42px;
+      &::before {
+        display: none;
+      }
+      .text-block {
+        width: 100%;
+        max-width: inherit;
+        text-align: right;
+        margin-bottom: 42px;
+        br {
+          display: none;
+        }
+      }
+    }
+    .wireframes-img {
+      width: 100%;
+      max-width: inherit;
+    }
+    .project-description-single-title {
+      padding-left: 0;
+      margin-bottom: 32px;
+      .figure-holder {
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        &::before {
+          width: 185px;
+          height: 463px;
+          left: 0;
+        }
+        &::after {
+          width: 185px;
+          height: 395px;
+          left: inherit;
+          right: 55%;
+        }
+      }
+    }
+    .style-guide {
+      .font-block {
+        margin-bottom: 49px;
+        &__title {
+          margin-bottom: 29px;
+        }
+        &__text-box {
+          margin-bottom: 38px;
+        }
+        &__text-box--bold {
+          width: 100%;
+          max-width: inherit;
+          margin-top: 0;
+        }
+      }
+      .colors-blocks-wrap {
+        .project-description-title {
+          padding-left: 35%;
+          text-align: left;
+        }
+        .figure-holder {
+          &::before {
+            width: 185px;
+            height: 310px;
+            right: inherit;
+            left: -75px;
+          }
+        }
+      }
+      .colors-blocks {
+        &__square {
+          width: 72px;
+          height: 72px;
+        }
+      }
+    }
+    .project-footer {
+      padding: 110px 0 25px;
+    }
+  }
+}
+
+@include respond-to(small) {
+  .street-quests-project-page {
+    .project-street-quests {
+      padding: 0;
+    }
+    .project {
+      &__canvas {
+        height: 320px;
+        padding: 56px 0 0 132px;
+      }
+      &__img-holder {
+        width: 149px;
+        left: 11px;
+      }
+    }
+    .top-text-block {
+      .project-description-title {
+        padding: 5px 0;
+        &::before {
+          width: 148px;
+        }
+        &::after {
+          width: 180px;
+          height: 318px;
+          left: inherit;
+          right: 0;
+        }
+      }
+    }
+    .title-row {
+      margin-bottom: 20px;
+    }
+    .project-description-single-title {
+      .figure-holder {
+        &::before {
+          width: 149px;
+          height: 445px;
+        }
+        &::after {
+          width: 149px;
+          height: 380px;
+          right: 24.8%;
+          top: 15px;
+        }
+      }
+    }
+    .style-guide {
+      .colors-blocks__item {
+        width: 72px;
+        margin: 0 20px;
+      }
+      .colors-blocks-wrap {
+        .project-description-title {
+          padding-left: 0;
+        }
+        .figure-holder {
+          width: 100%;
+          display: block;
+          padding-left: 75px;
+          &::before {
+            width: 149px;
+            height: 250px;
+            left: 0;
+          }
+
+        }
+      }
+    }
+    .layouts-block {
+      .project-description-title {
+        margin-bottom: 0;
+      }
+    }
+    .project-footer {
+      padding: 120px 0 15px;
+    }
   }
 }

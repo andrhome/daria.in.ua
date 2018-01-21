@@ -176,6 +176,9 @@
           padding-left: 10.2%;
         }
         @include respond-to(small) {
+          padding-left: 16.5%;
+        }
+        @include respond-to(small-320) {
           padding-left: 26.5%;
         }
       }
