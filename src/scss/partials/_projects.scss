@@ -31,7 +31,7 @@
   }
   &__content {
     position: relative;
-    margin-left: 24.7%;
+    margin-left: 23.4%;
   }
   &__canvas {
     height: 640px;
@@ -90,11 +90,14 @@
     transition: all 1s ease-in-out;
   }
   &__img-holder {
-    width: 332px;
+    width: 24.3%;
     position: absolute;
     bottom: -29%;
-    left: -11.5%;
+    left: -9.7%;
     z-index: 1;
+    img {
+      width: 100%;
+    }
   }
   .link-line {
     width: 343px;
@@ -310,16 +313,71 @@
   .project {
     margin-bottom: 130px;
     &__content {
-      margin-left: 28.5%;
+      margin-left: 25.5%;
+    }
+    &__canvas {
+      height: 497px;
+      padding: 65px 20px 50px 135px;
+      &::after {
+        width: 310px;
+      }
+    }
+    &__wrap {
+      width: 570px;
+    }
+    &__title-holder {
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+    .project__title {
+      font-size: $font-size-lg - 6;
+      line-height: $font-size-lg;
+      margin-bottom: 30px;
+    }
+    .project__subtitle {
+      font-size: $font-size-big - 6;
     }
     &__bg {
       height: 100%;
     }
     &__img-holder {
-      left: -18%;
+      width: 24.3%;
+      left: -12.8%;
+      bottom: -28%;
+      img {
+        width: 100%;
+      }
     }
-    .mobile-project-link {
-      display: block;
+    .link-line {
+      width: 320px;
+      font-size: $font-size-big - 4;
+      &__overflow {
+        &::after,
+        &::before {
+          top: 4px;
+        }
+      }
+    }
+  }
+  .project-logbook {
+    padding: 15% 0 5%;
+    .project__canvas {
+      width: 422px;
+      height: 380px;
+      top: -18%;
+      right: 16.7%;
+    }
+    .project__wrap {
+      margin-right: 11%;
+    }
+    .project__img-holder {
+      max-width: 428px;
+      width: 34%;
+      padding-left: 0;
+    }
+    .logbook-kia {
+      width: 16%;
+      top: 29%;
     }
   }
 }
@@ -330,7 +388,20 @@
       display: none;
     }
     &__content {
-      margin-left: 28.4%;
+      margin-left: 25.4%;
+    }
+    &__canvas {
+      width: 77.7%;
+      height: 600px;
+      padding-left: 40%;
+      &::after {
+        width: 100%;
+      }
+    }
+    &__img-holder {
+      width: 48.8%;
+      left: -13.7%;
+      bottom: -38%;
     }
     &.active,
     &:hover {
@@ -342,6 +413,9 @@
       .project__bg {
         opacity: 0;
       }
+    }
+    .mobile-project-link {
+      display: block;
     }
   }
   .project-zernobot {
@@ -371,11 +445,6 @@
 }
 
 @include respond-to(tablet2) {
-  .project {
-    &__content {
-      margin-left: 18%;
-    }
-  }
   .project-logbook {
     .project__wrap {
       margin-right: 4%;
@@ -399,8 +468,8 @@
     }
     &__canvas {
       width: 100%;
-      height: 440px;
-      padding: 63px 10px 0 88px;
+      height: 520px;
+      padding-top: 100px;
       &::after {
         width: 100%;
         height: 100%;
@@ -414,6 +483,7 @@
       margin-bottom: 0;
     }
     &__img-holder {
+      width: 196px;
       left: 4px;
       bottom: -110px;
     }
@@ -448,6 +518,9 @@
 
 @include respond-to(small-320) {
   .project {
+    &__canvas {
+      padding: 143px 10px 0 88px;
+    }
     &__img-holder {
       width: 155px;
       bottom: -18%;

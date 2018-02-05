@@ -40,18 +40,17 @@
   width: 274px;
   display: inline-block;
   font-size: $font-size-big;
-  @include respond-to(mobile) {
-    font-size: $font-size;
-  }
   color: $color-3--2;
   overflow: hidden;
   padding: 10px 0;
   transition: all .2s cubic-bezier(.19, 1, .22, 1);
   @include respond-to(desktop) {
-    width: 235px;
+    width: 224px;
+    font-size: $font-size-big - 4;
   }
   @include respond-to(mobile) {
     width: 65px;
+    font-size: $font-size;
   }
   &.link-line--right {
     text-align: left;
@@ -188,18 +187,24 @@
  * Main title
  */
 .main-title-holder {
-  padding: 18.5% 15px 8% 13.5%;
+  width: 90%;
+  padding: 18.5% 15px 8% 33.4%;
   @include respond-to(desktop) {
-    padding: 24% 15px 8% 17%;
+    padding: 24% 15px 8% 16.7%;
   }
   @include respond-to(tablet) {
     max-width: 580px;
   }
   .main-title {
-    max-width: 842px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 885px;
     span {
       display: inline-block;
+    }
+    @media (max-width: 1600px) {
+      br {
+        display: none;
+      }
     }
   }
   @include respond-to(mobile) {

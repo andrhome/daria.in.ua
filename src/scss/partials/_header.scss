@@ -20,6 +20,9 @@
     z-index: 1000;
     animation: linear fade-in 1s;
     transition-delay: 0s;
+    @include respond-to(desktop) {
+      padding: 20px 0;
+    }
     .home-link {
       display: block;
     }
@@ -27,7 +30,7 @@
       display: block;
       margin: 0 auto;
       @include respond-to(desktop) {
-        width: 235px;
+        width: 210px;
       }
     }
     @include respond-to(mobile) {
@@ -41,17 +44,17 @@
     }
   }
   .logo {
-    width: 250px;
+    width: 14.4%;
     padding-left: 1px;
-    margin-left: 42px;
+    margin-left: 2.2%;
     animation: linear fade-in 1.5s;
     transition-delay: 2s;
-    @include respond-to(desktop) {
-      width: 250px;
-    }
     @include respond-to(mobile) {
-      width: 150px;
+      width: 24%;
       margin-left: 10px;
+    }
+    @include respond-to(small) {
+      width: 47%;
     }
   }
   .logo-mobile {
@@ -67,7 +70,7 @@
     transition-delay: 2s;
     margin-top: 10px;
     @include respond-to(desktop) {
-      width: 239px;
+      width: 220px;
     }
     @include respond-to(mobile) {
       width: 65px;

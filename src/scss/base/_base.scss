@@ -22,7 +22,7 @@ a {
 h1 {
 	font-size: $font-size-st;
 	line-height: $font-size-st + 23;
-	@include respond-to(desktop) {
+	@media (max-width: 1380px) {
 		font-size: $font-size-lg + 2;
 		line-height: $font-size-lg + 24;
 	}

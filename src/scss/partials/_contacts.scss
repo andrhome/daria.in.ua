@@ -171,6 +171,44 @@
 
 @include respond-to(desktop) {
   .contacts {
+    padding: 100px 0;
+    a {
+      font-size: $font-size + 2;
+      margin-bottom: 15px;
+    }
+    &__title {
+      font-size: $font-size-lg - 6;
+      line-height: $font-size-st - 4;
+      margin-bottom: 55px;
+    }
+    &__subtitle {
+      font-size: $font-size-big - 4;
+      margin-bottom: 30px;
+    }
+  }
+  .feedback-form {
+    .form-group {
+      &:not(:first-child) {
+        margin-top: 55px;
+      }
+    }
+    .label-text {
+      font-size: $font-size-big - 4;
+    }
+    .form-field {
+      height: 42px;
+      font-size: $font-size + 2;
+      line-height: $font-size-big - 4;
+      padding: 5px 0;
+      &--textarea {
+        height: 110px;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .contacts {
     .container {
       flex-direction: column;
     }
@@ -178,19 +216,10 @@
       width: 100%;
       margin-bottom: 80px;
     }
-    &__title {
-      margin-bottom: 20%;
-    }
   }
   .feedback-form {
     max-width: inherit;
     width: 416px;
-  }
-}
-
-@include respond-to(tablet) {
-  .contacts {
-    padding: 120px 0;
   }
 }
 
