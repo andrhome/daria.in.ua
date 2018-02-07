@@ -48,7 +48,7 @@
     &--left {
       width: 420px;
       @include respond-to(desktop) {
-        width: 390px;
+        width: 365px;
       }
     }
     &--right {
@@ -57,6 +57,18 @@
         width: 320px;
       }
     }
+  }
+}
+
+@include respond-to(tablet) {
+  .footer__content {
+    max-width: 860px;
+  }
+}
+
+@include respond-to(tablet2) {
+  .footer__content {
+    max-width: 720px;
   }
 }
 
@@ -100,5 +112,8 @@
         }
       }
     }
+  }
+  .footer__content {
+    max-width: inherit;
   }
 }

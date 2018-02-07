@@ -53,7 +53,7 @@
 @include respond-to(desktop) {
   .project-page {
     .container--resize {
-      width: 71%;
+      width: 70.4%;
     }
   }
 }
@@ -62,6 +62,9 @@
   .project-page {
     .container--resize {
       width: 68.7%;
+    }
+    .scroll-line {
+      margin-top: 80px;
     }
   }
 }

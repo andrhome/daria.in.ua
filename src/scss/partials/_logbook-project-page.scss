@@ -286,15 +286,15 @@
 
 @include respond-to(desktop) {
   .logbook-project-page {
-    .car-img {
-      top: -80px;
-    }
     .logo-icons {
       margin-bottom: 120px;
     }
     .car-icons {
       max-width: 945px;
       margin: 0 auto;
+      &__item {
+        margin: 13.5px;
+      }
     }
     .font-block-holder {
       &::before {
@@ -305,6 +305,17 @@
       .colors-blocks__item {
         min-width: inherit;
         width: 25%;
+        &:not(:last-child) {
+          margin-right: 12%;
+        }
+      }
+      .font-block {
+        .project-description-title {
+          padding-left: 17.8%;
+        }
+        &__text-box--bold {
+          width: 50%;
+        }
       }
     }
   }
@@ -325,12 +336,17 @@
       }
     }
     .car-img {
-      top: -60px;
+      top: -85px;
     }
     .car-icons {
       max-width: 640px;
     }
     .style-guide {
+      .colors-blocks__item {
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
       .font-block {
         .project-description-title {
           padding-left: 22.5%;
@@ -351,8 +367,16 @@
       }
     }
     .style-guide {
+      .colors-blocks__item {
+        &:not(:last-child) {
+          margin-right: 4px;
+        }
+      }
       .font-block {
         margin-bottom: 50px;
+        .project-description-title {
+          padding-left: 13.9%;
+        }
         &__text-box--bold {
           &:last-child {
             float: none;
@@ -384,7 +408,8 @@
       padding-left: 27%;
     }
     .project__img-holder {
-      max-width: 440px;
+      max-width: inherit;
+      width: 65%;
     }
     .title-row--top {
       display: block;
@@ -449,7 +474,7 @@
       }
     }
     .project__img-holder {
-      max-width: 224px;
+      width: 224px;
       margin: 0;
     }
     .fit-for{
@@ -525,7 +550,7 @@
       &__item {
         width: 140px;
         height: 140px;
-        margin: 10px;
+        margin: 6px;
       }
     }
     .landscape {

@@ -7,7 +7,7 @@
     margin-bottom: 43px;
   }
   &__top-row {
-    margin: -60px 0 0 24.7%;
+    margin: -60px 0 0 24.9%;
     .style-guide__title {
       text-align: center;
     }
@@ -28,12 +28,13 @@
       padding: 0;
     }
     &__item {
-      min-width: 304px;
+      min-width: 306px;
       text-align: center;
-      @include respond-to(tablet) {
-        min-width: 252px;
+      @include respond-to(desktop) {
+        min-width: inherit;
+        width: 240px;
         &:not(:last-child) {
-          margin-right: 12px;
+          margin-right: 12.5%;
         }
       }
       @include respond-to(tablet2) {
@@ -164,7 +165,7 @@
         padding-right: 18%;
         @include respond-to(desktop) {
           padding-right: 0;
-          padding-left: 17%;
+          padding-left: 15.8%;
         }
         @include respond-to(tablet) {
           padding-left: 20.1%;

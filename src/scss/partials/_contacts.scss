@@ -210,6 +210,7 @@
 @include respond-to(tablet) {
   .contacts {
     .container {
+      max-width: 860px;
       flex-direction: column;
     }
     &__info {
@@ -223,9 +224,20 @@
   }
 }
 
+@include respond-to(tablet2) {
+  .contacts {
+    .container {
+      max-width: 720px;
+    }
+  }
+}
+
 @include respond-to(mobile) {
   .contacts {
     padding: 43px 0;
+    .container {
+      max-width: inherit;
+    }
     &__title {
       font-size: $font-size-big;
       line-height: $font-size-lg;
@@ -256,8 +268,8 @@
     }
   }
   .feedback-form  {
-    width: 280px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
     .label-text {
       font-size: $font-size + 4;
       i {

@@ -20,7 +20,7 @@
   .intro-box {
     max-width: 320px;
     float: right;
-    margin-right: 20.9%;
+    margin-right: 20.8%;
   }
   .project-main-image {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
@@ -57,8 +57,13 @@
 
 @include respond-to(desktop) {
   .zernobot-project-page {
+    .project-zernobot {
+      .project__canvas {
+        height: 415px;
+      }
+    }
     .intro-box {
-      margin-right: 14%;
+      margin-right: 15.1%;
     }
     .image-block {
       margin-top: -23%;
@@ -71,6 +76,11 @@
 
 @include respond-to(tablet) {
   .zernobot-project-page {
+    .project-zernobot {
+      .project__canvas {
+        height: 550px;
+      }
+    }
     .intro-box {
       margin-right: 10.5%;
     }
@@ -91,6 +101,35 @@
     .image-block {
       margin-top: -23%;
     }
+    .project-zernobot {
+      .project__content {
+        padding-bottom: 65px;
+        padding-left: 36px;
+        margin-bottom: 110px;
+        margin-left: 0;
+      }
+      .project__canvas {
+        height: 382px;
+        padding-top: 90px;
+        padding-left: 30%;
+      }
+      .project__bg {
+        height: 100%;
+        top: 0;
+        bottom: inherit;
+        background-position: 36px 0;
+      }
+    }
+    .project__img-holder {
+      width: 26.4%;
+      left: 2px;
+      bottom: -41%;
+    }
+    .style-guide {
+      .font-block__title {
+        padding-left: 27%;
+      }
+    }
   }
 }
 
@@ -100,22 +139,16 @@
       overflow: hidden;
     }
     .project-zernobot {
-      .project__content {
-        padding-bottom: 65px;
-        padding-left: 36px;
-        margin-bottom: 110px;
-        margin-left: 0;
-      }
       .project__canvas {
-        height: 336px;
-        padding-top: 76px;
-        padding-left: 135px;
+        height: 333px;
       }
-      .project__bg {
-        height: 100%;
-        top: 0;
-        bottom: inherit;
-        left: 36px;
+    }
+    .intro-box {
+      margin-right: 31.9%;
+    }
+    .style-guide {
+      .font-block__title {
+        padding-left: 18.7%;
       }
     }
     .gradient-block {
@@ -142,8 +175,24 @@
 
 @include respond-to(small) {
   .zernobot-project-page {
+    .project-zernobot {
+      .project__canvas {
+        height: 240px;
+        padding-left: 43%;
+      }
+    }
+    .project__img-holder {
+      width: 44.4%;
+      left: 3px;
+      bottom: -70%;
+    }
+    .style-guide {
+      .font-block__title {
+        padding-left: 24.9%;
+      }
+    }
     .intro-box {
-      margin-right: 5.8%;
+      margin-right: 8%;
       &__date {
         margin-bottom: 18px;
       }
@@ -156,9 +205,11 @@
     .project-zernobot {
       .project__content {
         padding-bottom: 0;
+        margin-bottom: 85px;
       }
       .project__canvas {
         height: auto;
+        padding-top: 76px;
         padding-bottom: 59.5%;
       }
       .project__bg {
@@ -169,6 +220,13 @@
         left: inherit;
         right: 0;
       }
+    }
+    .project__img-holder {
+      width: 126px;
+      bottom: -60px;
+    }
+    .intro-box {
+      margin-right: 5.9%;
     }
   }
 }
