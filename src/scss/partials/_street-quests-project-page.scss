@@ -9,7 +9,7 @@
     box-sizing: border-box;
   }
   .project-street-quests {
-    padding: 220px 0 0;
+    padding: 0;
     margin-bottom: 83px;
     &.active {
       .project__canvas {
@@ -23,15 +23,19 @@
       }
     }
   }
+  .project__content {
+    padding: 12.5% 0 15%;
+  }
   .project__canvas {
-    min-height: 536px;
+    height: auto;
+    min-height: inherit;
     padding-top: 0;
     padding-bottom: 0;
   }
   .project__img-holder {
-    width: 330px;
-    bottom: -37%;
-    left: -11.5%;
+    width: 23.7%;
+    bottom: -25%;
+    left: -9.7%;
   }
   .intro-box-holder {
     @include clearfix;
@@ -53,7 +57,7 @@
       position: relative;
       &::before, &::after {
         content: '';
-        width: 306px;
+        width: 305px;
         border: 1px solid $color-1--2;
         position: absolute;
         z-index: -1;
@@ -61,7 +65,7 @@
       &::before {
         height: 533px;
         bottom: 0;
-        left: 1px;
+        left: 0;
       }
       &::after {
         height: 576px;
@@ -84,11 +88,12 @@
       border: 1px solid $color-1--2;
       position: absolute;
       top: -10px;
-      right: 0;
+      right: -2px;
       z-index: -1;
     }
     .text-block {
-      margin-right: -5px;
+      letter-spacing: -0.3px;
+      margin-right: -3px;
     }
     .project-description-title {
       padding-top: 25px;
@@ -119,7 +124,7 @@
         width: 306px;
         height: 632px;
         bottom: 0;
-        right: 0;
+        right: 1px;
       }
       &::after {
         width: 461px;
@@ -136,7 +141,7 @@
       margin-bottom: 200px;
       &__title {
         text-align: left;
-        padding-left: 25%;
+        padding-left: 24.7%;
         margin-bottom: 69px;
       }
       &__text-box {
@@ -150,6 +155,7 @@
     }
     .colors-blocks {
       &__item {
+        min-width: 302px;
         margin: 0 2px;
       }
       &__item-2 {
@@ -222,23 +228,27 @@
 
 @include respond-to(desktop) {
   .street-quests-project-page {
-    .project-street-quests {
-      padding: 12% 0 0;
+    .project__canvas {
+      padding-left: 26%;
     }
     .intro-box {
-      margin-right: 14.5%;
+      margin-right: 15.8%;
     }
     .project__img-holder {
-      left: -17.9%;
+      width: 24.3%;
+      left: -12.8%;
     }
     .top-text-block {
       .project-description-title {
         &::after {
-          right: 9.1%;
+          right: 24.9%;
         }
       }
     }
     .wireframes-row {
+      &::before {
+        width: 86.5%;
+      }
       .text-block {
         margin-right: 0;
       }
@@ -249,24 +259,26 @@
       .figure-holder {
         padding-left: 42px;
         &::before {
-          height: 552px;
+          width: 319px;
+          height: 567px;
           right: -4px;
         }
         &::after {
-          width: 439px;
+          width: 420px;
           height: 1035px;
+          left: 39px;
         }
       }
     }
     .colors-blocks-wrap {
       .project-description-title {
         padding-right: 0;
-        padding-left: 40.4%;
+        padding-left: 22.7%;
       }
       .figure-holder {
         &::before {
-          width: 599px;
-          height: 600px;
+          width: 631px;
+          height: 695px;
           right: 4px;
         }
       }
@@ -280,7 +292,11 @@
           height: 180px;
         }
         &__item {
+          min-width: 242px;
           margin: 0;
+          &:not(:last-child) {
+            margin-right: 10.5%;
+          }
         }
       }
     }
@@ -289,48 +305,79 @@
 
 @include respond-to(tablet) {
   .street-quests-project-page {
+    .home-section {
+      margin-bottom: 7%;
+    }
+    .project__content {
+      padding: 12.5% 0 22%;
+    }
+    .project__subtitle {
+      margin-bottom: 0;
+    }
     .intro-box {
       margin-right: 11.3%;
     }
     .top-text-block {
       .project-description-title {
+        &::after,
+        &::before {
+          width: 255px;
+        }
         &::after {
-          right: 14.6%;
+          height: 445px;
+          right: 24.1%;
         }
       }
     }
     .project-description-single-title {
       .figure-holder {
+        padding-left: 53px;
         &::before {
-          height: 510px;
+          width: 250px;
+          height: 375px;
           right: 0;
-          left: -87.2%;
+          left: -20.5%;
         }
         &::after {
+          width: 418px;
           height: 900px;
-          left: -36.9%;
+          left: -20.5%;
         }
       }
     }
     .wireframes-row {
       &::before {
-        width: 99.6%;
+        width: 100%;
       }
     }
     .style-guide {
       .font-block__text-box {
         width: 100%;
       }
+      .colors-blocks {
+        left: 0;
+        &__item {
+          width: auto;
+          min-width: inherit;
+          &:not(:last-child) {
+            margin-right: 16.7%;
+          }
+        }
+        &__square {
+          width: 168px;
+          height: 168px;
+        }
+      }
     }
     .colors-blocks-wrap {
       .project-description-title {
-        padding-left: 33.4%;
+        padding-left: 3px;
       }
       .figure-holder {
         &::before {
-          width: 511px;
-          height: 560px;
-          right: -10%;
+          width: 503px;
+          height: 660px;
+          right: -4.9%;
         }
       }
     }
@@ -411,7 +458,8 @@
         margin-left: 0;
       }
       &__img-holder {
-        left: 4px;
+        width: 26.8%;
+        left: 2px;
       }
     }
     .home-section {
@@ -423,9 +471,10 @@
     .scroll-line {
       margin-top: 0;
     }
+    .project__content {
+      padding-bottom: 29%;
+    }
     .project__canvas {
-      min-height: inherit;
-      height: 340px;
       padding-left: 34%;
     }
     .top-text-block {
@@ -433,13 +482,13 @@
         padding: 5px 0;
         &::after,
         &::before {
-          width: 185px;
+          width: 182px;
           height: 294px;
         }
         &::after {
           top: 15px;
           right: inherit;
-          left: 18%;
+          left: 16.5%;
         }
       }
       p {
@@ -476,15 +525,15 @@
         text-align: left;
         padding-left: 0;
         &::before {
-          width: 185px;
+          width: 182px;
           height: 463px;
           left: 0;
         }
         &::after {
-          width: 185px;
+          width: 182px;
           height: 395px;
           left: inherit;
-          right: 55%;
+          right: 62.5%;
         }
       }
     }
@@ -505,19 +554,25 @@
       }
       .colors-blocks-wrap {
         .project-description-title {
-          padding-left: 35%;
+          padding-left: 39.7%;
           text-align: left;
         }
         .figure-holder {
           &::before {
-            width: 185px;
+            width: 183px;
             height: 310px;
             right: inherit;
-            left: -75px;
+            left: -73px;
           }
         }
       }
       .colors-blocks {
+        max-width: 449px;
+        justify-content: space-between;
+        margin: 0 auto;
+        &__item {
+          width: 82px;
+        }
         &__square {
           width: 72px;
           height: 72px;
@@ -535,13 +590,20 @@
     .project-street-quests {
       padding: 0;
     }
+    .intro-box {
+      margin-right: 7.2%;
+    }
     .project {
+      &__content {
+        padding: 0;
+      }
       &__canvas {
         height: 320px;
-        padding: 56px 0 0 132px;
+        padding: 56px 0 0 110px;
       }
       &__img-holder {
-        width: 149px;
+        width: 140px;
+        bottom: -40%;
         left: 11px;
       }
     }
@@ -549,13 +611,13 @@
       .project-description-title {
         padding: 5px 0;
         &::before {
-          width: 148px;
+          width: 142px;
         }
         &::after {
-          width: 180px;
+          width: 177px;
           height: 318px;
           left: inherit;
-          right: 0;
+          right: -1px;
         }
       }
     }
@@ -565,13 +627,13 @@
     .project-description-single-title {
       .figure-holder {
         &::before {
-          width: 149px;
-          height: 445px;
+          width: 142px;
+          height: 440px;
         }
         &::after {
-          width: 149px;
+          width: 142px;
           height: 380px;
-          right: 24.8%;
+          right: 24.7%;
           top: 15px;
         }
       }
@@ -579,7 +641,6 @@
     .style-guide {
       .colors-blocks__item {
         width: 72px;
-        margin: 0 20px;
       }
       .colors-blocks-wrap {
         .project-description-title {
@@ -588,19 +649,18 @@
         .figure-holder {
           width: 100%;
           display: block;
-          padding-left: 75px;
+          padding-left: 70px;
           &::before {
-            width: 149px;
+            width: 142px;
             height: 250px;
             left: 0;
           }
-
         }
       }
     }
     .layouts-block {
       .project-description-title {
-        margin-bottom: 0;
+        margin-bottom: 10px;
       }
     }
     .project-footer {
