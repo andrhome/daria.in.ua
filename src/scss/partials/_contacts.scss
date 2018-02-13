@@ -172,6 +172,13 @@
 @include respond-to(desktop) {
   .contacts {
     padding: 100px 0;
+    &.contacts-about {
+      padding: 9% 8.9% 100px;
+      .container--resize {
+        width: 100%;
+        max-width: inherit;
+      }
+    }
     a {
       font-size: $font-size + 2;
       margin-bottom: 15px;
@@ -213,6 +220,9 @@
       max-width: 860px;
       flex-direction: column;
     }
+    &.contacts-about {
+      padding: 90px 15px 70px;
+    }
     &__info {
       width: 100%;
       margin-bottom: 80px;
@@ -237,6 +247,9 @@
     padding: 43px 0;
     .container {
       max-width: inherit;
+    }
+    &.contacts-about {
+      padding: 44px 0 106px;
     }
     &__title {
       font-size: $font-size-big;
